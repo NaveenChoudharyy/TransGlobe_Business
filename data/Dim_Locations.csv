@@ -1,0 +1,26 @@
+LocationID,City,State,Region,Country,Zone
+1,Mumbai,Maharashtra,West,India,Zone-C
+2,Delhi,Delhi,North,India,Zone-A
+3,Bengaluru,Karnataka,South,India,Zone-A
+4,Chennai,Tamil Nadu,South,India,Zone-C
+5,Kolkata,West Bengal,East,India,Zone-B
+6,Hyderabad,Telangana,South,India,Zone-A
+7,Pune,Maharashtra,West,India,Zone-A
+8,Ahmedabad,Gujarat,West,India,Zone-A
+9,Jaipur,Rajasthan,North,India,Zone-C
+10,Lucknow,Uttar Pradesh,North,India,Zone-A
+11,Surat,Gujarat,West,India,Zone-C
+12,Nagpur,Maharashtra,West,India,Zone-C
+13,Indore,Madhya Pradesh,Central,India,Zone-C
+14,Bhopal,Madhya Pradesh,Central,India,Zone-A
+15,Patna,Bihar,East,India,Zone-C
+16,Chandigarh,Punjab,North,India,Zone-B
+17,Kochi,Kerala,South,India,Zone-A
+18,Coimbatore,Tamil Nadu,South,India,Zone-A
+19,Visakhapatnam,Andhra Pradesh,South,India,Zone-A
+20,Guwahati,Assam,Northeast,India,Zone-A
+21,Ranchi,Jharkhand,East,India,Zone-A
+22,Raipur,Chhattisgarh,Central,India,Zone-C
+23,Ludhiana,Punjab,North,India,Zone-C
+24,Nashik,Maharashtra,West,India,Zone-A
+25,Vadodara,Gujarat,West,India,Zone-C

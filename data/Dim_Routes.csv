@@ -1,0 +1,351 @@
+RouteID,OriginLocationID,DestinationLocationID,RouteType,DistanceKm,AvgTrafficLevel
+1,20,4,National Long-Haul,1081.5,Medium
+2,19,24,National Long-Haul,2065.3,High
+3,17,22,Inter-State,1339.3,Low
+4,24,16,Inter-State,1894.4,High
+5,16,10,Inter-State,517.8,Low
+6,24,8,Inter-State,1952.8,Medium
+7,13,16,National Long-Haul,1202.0,Medium
+8,15,18,Inter-State,449.1,Medium
+9,7,19,Inter-State,1762.7,Low
+10,25,22,National Long-Haul,803.1,Medium
+11,22,1,National Long-Haul,723.6,High
+12,1,9,National Long-Haul,1533.9,High
+13,3,13,Inter-State,1002.8,Medium
+14,25,14,National Long-Haul,1816.3,Low
+15,21,12,National Long-Haul,1877.4,Medium
+16,21,25,Inter-State,1546.1,Medium
+17,7,25,National Long-Haul,1141.0,Low
+18,20,9,National Long-Haul,1220.1,High
+19,8,16,National Long-Haul,639.5,Medium
+20,24,4,National Long-Haul,2196.4,Medium
+21,5,4,National Long-Haul,661.5,Medium
+22,1,18,Inter-State,1301.4,Low
+23,19,16,Inter-State,373.9,Medium
+24,6,16,National Long-Haul,910.4,Medium
+25,15,18,National Long-Haul,1350.5,Medium
+26,7,11,National Long-Haul,503.5,Medium
+27,3,12,National Long-Haul,775.6,Medium
+28,18,23,National Long-Haul,2169.5,Medium
+29,3,13,Inter-State,520.8,High
+30,5,3,National Long-Haul,448.3,Medium
+31,3,20,Inter-State,1822.4,Medium
+32,13,23,National Long-Haul,1990.8,High
+33,19,23,National Long-Haul,1781.3,Medium
+34,15,9,National Long-Haul,1591.5,Medium
+35,19,5,Inter-State,2185.4,High
+36,17,12,National Long-Haul,1268.8,Medium
+37,18,15,Inter-State,927.7,High
+38,4,25,National Long-Haul,1590.9,Medium
+39,10,3,National Long-Haul,1990.6,Medium
+40,25,19,Inter-State,975.3,Low
+41,2,19,Inter-State,606.6,Low
+42,13,8,National Long-Haul,423.0,Medium
+43,8,16,National Long-Haul,2065.8,Low
+44,19,16,National Long-Haul,2178.2,Medium
+45,5,23,Inter-State,2135.5,Low
+46,8,2,Inter-State,1586.8,Low
+47,5,25,National Long-Haul,634.0,Medium
+48,8,20,Inter-State,2199.4,Medium
+49,15,13,National Long-Haul,2054.8,Medium
+50,12,17,National Long-Haul,1263.4,High
+51,15,22,National Long-Haul,1648.2,Low
+52,16,2,Inter-State,822.5,Low
+53,12,20,Inter-State,1858.8,High
+54,13,10,Inter-State,1002.5,High
+55,13,23,Inter-State,616.4,Medium
+56,19,13,National Long-Haul,1665.0,Medium
+57,2,18,Inter-State,1344.0,High
+58,12,23,National Long-Haul,1150.4,Medium
+59,18,23,Inter-State,739.4,Low
+60,17,2,Inter-State,1601.5,Low
+61,10,16,Inter-State,1450.2,Low
+62,2,4,National Long-Haul,1017.9,High
+63,7,25,Inter-State,1596.2,Medium
+64,14,17,Inter-State,1256.1,Low
+65,21,17,National Long-Haul,682.1,Low
+66,18,4,Intra-State,161.8,Low
+67,2,11,National Long-Haul,518.8,Medium
+68,3,22,National Long-Haul,812.7,High
+69,24,3,National Long-Haul,326.5,Medium
+70,3,7,National Long-Haul,939.3,High
+71,8,24,National Long-Haul,1241.9,Low
+72,6,17,Inter-State,1061.2,Medium
+73,14,18,National Long-Haul,2063.0,Medium
+74,7,18,Inter-State,1200.4,Low
+75,23,6,National Long-Haul,1816.7,Medium
+76,1,17,Inter-State,914.1,High
+77,22,16,Inter-State,913.7,Low
+78,10,24,Inter-State,1431.4,Medium
+79,15,17,National Long-Haul,382.9,High
+80,22,24,National Long-Haul,1475.6,High
+81,9,12,National Long-Haul,1476.0,Medium
+82,16,21,National Long-Haul,1313.2,Low
+83,1,13,Inter-State,482.1,High
+84,16,19,National Long-Haul,403.6,Low
+85,6,5,National Long-Haul,1943.8,Low
+86,17,7,National Long-Haul,309.4,Low
+87,17,20,Inter-State,1183.2,Medium
+88,22,20,National Long-Haul,967.0,Medium
+89,10,18,National Long-Haul,373.4,High
+90,15,5,National Long-Haul,1433.0,Medium
+91,16,10,National Long-Haul,1392.8,High
+92,10,13,National Long-Haul,2023.3,Medium
+93,17,16,National Long-Haul,1353.7,Medium
+94,21,12,National Long-Haul,1806.9,Low
+95,3,11,Inter-State,1841.8,Low
+96,16,24,Inter-State,1539.4,Medium
+97,25,12,National Long-Haul,2155.9,Medium
+98,19,15,Inter-State,1830.2,Low
+99,7,21,National Long-Haul,2104.4,Medium
+100,17,20,Inter-State,1338.6,Medium
+101,22,21,National Long-Haul,1738.9,Medium
+102,3,10,National Long-Haul,2169.0,Low
+103,2,7,National Long-Haul,2115.8,Low
+104,4,2,National Long-Haul,2012.9,Medium
+105,9,7,Inter-State,1157.7,High
+106,1,9,National Long-Haul,1284.3,High
+107,5,22,Inter-State,1296.2,Low
+108,3,16,Inter-State,1474.8,Low
+109,18,2,National Long-Haul,1131.9,Medium
+110,8,14,Inter-State,2099.4,Low
+111,3,2,National Long-Haul,1242.3,High
+112,19,10,Inter-State,1812.7,Medium
+113,18,24,National Long-Haul,1455.5,High
+114,13,9,Inter-State,2194.9,Low
+115,20,2,Inter-State,1943.4,High
+116,13,11,National Long-Haul,1522.2,High
+117,9,1,Inter-State,732.3,Medium
+118,6,13,Inter-State,711.1,High
+119,3,22,National Long-Haul,575.0,Medium
+120,4,21,National Long-Haul,1560.7,Low
+121,9,23,National Long-Haul,1783.7,Medium
+122,21,23,National Long-Haul,987.2,High
+123,7,25,Inter-State,1776.7,High
+124,12,20,National Long-Haul,740.1,Medium
+125,5,18,National Long-Haul,2089.9,Medium
+126,4,14,National Long-Haul,1438.5,Low
+127,19,9,National Long-Haul,1950.7,Low
+128,21,7,Inter-State,870.1,Medium
+129,2,22,Inter-State,1917.3,Medium
+130,9,21,Inter-State,1570.4,Low
+131,7,4,National Long-Haul,549.0,High
+132,8,18,Inter-State,1080.2,Medium
+133,13,16,Inter-State,1354.2,Medium
+134,6,20,National Long-Haul,2171.7,Low
+135,18,22,Inter-State,426.9,Low
+136,1,20,Inter-State,470.6,Medium
+137,16,15,National Long-Haul,1726.5,High
+138,9,5,Inter-State,1330.7,Low
+139,16,11,National Long-Haul,1964.4,High
+140,5,12,Inter-State,1778.4,High
+141,17,19,Inter-State,1325.0,High
+142,17,4,National Long-Haul,1310.2,Medium
+143,19,5,Inter-State,1832.3,Medium
+144,16,8,National Long-Haul,980.0,High
+145,2,7,National Long-Haul,827.1,Medium
+146,18,13,National Long-Haul,2068.0,Low
+147,24,3,National Long-Haul,1234.0,Medium
+148,22,15,Inter-State,1678.0,Medium
+149,20,9,Inter-State,608.2,Medium
+150,23,5,National Long-Haul,1992.1,High
+151,10,16,Inter-State,1919.7,Medium
+152,21,10,Inter-State,572.1,Low
+153,18,2,Inter-State,517.9,High
+154,7,19,Inter-State,1080.5,Low
+155,13,21,National Long-Haul,856.5,Low
+156,22,9,Inter-State,958.4,High
+157,16,24,National Long-Haul,793.0,High
+158,19,25,Inter-State,2003.9,Medium
+159,11,21,Inter-State,1318.0,Medium
+160,25,19,National Long-Haul,474.0,Medium
+161,14,3,National Long-Haul,1167.6,High
+162,7,23,National Long-Haul,499.9,High
+163,25,16,National Long-Haul,672.1,Low
+164,22,5,Inter-State,357.0,High
+165,18,19,National Long-Haul,1154.9,Medium
+166,3,13,National Long-Haul,462.7,Low
+167,8,17,Inter-State,955.0,Low
+168,6,16,Inter-State,712.1,Low
+169,21,14,National Long-Haul,885.3,High
+170,23,6,National Long-Haul,322.6,Medium
+171,7,19,National Long-Haul,1309.1,Medium
+172,11,12,National Long-Haul,1902.9,Low
+173,23,10,National Long-Haul,1276.7,High
+174,11,15,National Long-Haul,1861.2,Medium
+175,9,1,National Long-Haul,909.8,High
+176,12,16,Inter-State,1293.8,Medium
+177,18,19,National Long-Haul,2051.1,High
+178,3,15,National Long-Haul,1140.7,Medium
+179,24,21,Inter-State,2037.8,Medium
+180,18,11,Inter-State,470.6,High
+181,25,20,National Long-Haul,976.3,Medium
+182,16,17,National Long-Haul,1278.8,High
+183,1,2,National Long-Haul,1931.0,Low
+184,3,6,National Long-Haul,625.7,Medium
+185,7,13,Inter-State,2053.7,High
+186,25,12,National Long-Haul,702.9,High
+187,8,6,National Long-Haul,1147.1,Medium
+188,17,3,Inter-State,1107.2,Medium
+189,17,4,Inter-State,1905.4,High
+190,19,20,National Long-Haul,1122.0,Medium
+191,13,5,National Long-Haul,615.4,High
+192,17,23,Inter-State,2054.4,Low
+193,7,2,National Long-Haul,1843.0,Low
+194,14,1,Inter-State,1409.7,High
+195,6,20,Inter-State,1771.0,Medium
+196,3,17,National Long-Haul,930.8,Medium
+197,13,11,Inter-State,1921.1,Medium
+198,3,12,Inter-State,2041.6,High
+199,19,21,Inter-State,911.8,Medium
+200,12,13,National Long-Haul,1171.0,High
+201,24,6,National Long-Haul,1833.8,Medium
+202,9,16,Inter-State,509.5,Medium
+203,5,16,National Long-Haul,1799.5,Low
+204,14,24,Inter-State,1320.8,Medium
+205,3,23,Inter-State,1627.1,Low
+206,12,18,National Long-Haul,1617.9,Low
+207,6,2,National Long-Haul,783.6,Medium
+208,25,1,National Long-Haul,1690.3,Medium
+209,6,16,Inter-State,1805.8,Medium
+210,20,13,Inter-State,429.6,Medium
+211,8,10,Inter-State,614.3,Medium
+212,24,7,Intra-State,77.4,Medium
+213,20,11,National Long-Haul,807.1,High
+214,18,1,National Long-Haul,542.4,High
+215,23,8,Inter-State,920.4,High
+216,1,11,National Long-Haul,1288.4,Low
+217,20,12,National Long-Haul,1246.9,Medium
+218,14,11,National Long-Haul,428.5,High
+219,24,7,Intra-State,117.8,High
+220,10,25,National Long-Haul,1743.6,Medium
+221,14,11,Inter-State,1237.9,Medium
+222,7,21,National Long-Haul,721.0,High
+223,19,25,Inter-State,1908.8,High
+224,11,4,Inter-State,527.1,Medium
+225,18,14,Inter-State,2173.9,Low
+226,24,5,National Long-Haul,1258.9,High
+227,13,9,National Long-Haul,484.9,Medium
+228,7,5,Inter-State,1133.7,Low
+229,12,23,National Long-Haul,892.4,Medium
+230,8,24,Inter-State,929.5,Medium
+231,7,20,National Long-Haul,1896.9,Medium
+232,9,8,Inter-State,1900.3,High
+233,12,10,National Long-Haul,859.9,Low
+234,14,8,National Long-Haul,1372.8,Low
+235,6,20,National Long-Haul,2128.0,Medium
+236,20,3,National Long-Haul,541.4,Low
+237,19,4,National Long-Haul,1331.9,Medium
+238,25,7,Inter-State,1970.9,Medium
+239,5,14,Inter-State,312.5,Medium
+240,2,10,National Long-Haul,1588.1,High
+241,8,16,Inter-State,761.3,Low
+242,18,13,National Long-Haul,440.6,High
+243,7,8,Inter-State,1324.4,Medium
+244,15,25,Inter-State,695.8,Medium
+245,15,12,National Long-Haul,853.8,High
+246,24,6,National Long-Haul,2028.1,Low
+247,8,1,National Long-Haul,1941.6,High
+248,1,3,Inter-State,1670.5,Low
+249,7,21,Inter-State,1231.2,High
+250,16,19,Inter-State,1782.2,Low
+251,12,23,Inter-State,1526.3,Medium
+252,5,8,National Long-Haul,1803.5,Low
+253,11,22,National Long-Haul,1788.2,Medium
+254,13,20,Inter-State,1710.8,Low
+255,1,10,Inter-State,2159.4,Low
+256,24,18,Inter-State,1980.1,Low
+257,22,25,Inter-State,1246.1,Low
+258,21,14,National Long-Haul,1914.8,Medium
+259,14,7,National Long-Haul,1970.3,Medium
+260,14,8,National Long-Haul,1237.0,Low
+261,21,25,National Long-Haul,2060.9,High
+262,25,11,Intra-State,81.8,Medium
+263,6,19,Inter-State,1461.1,Low
+264,16,2,National Long-Haul,352.1,Medium
+265,1,11,Inter-State,1621.5,Medium
+266,3,10,National Long-Haul,607.5,Medium
+267,2,23,National Long-Haul,1673.9,High
+268,16,5,National Long-Haul,1931.9,Medium
+269,21,16,Inter-State,912.2,High
+270,7,11,National Long-Haul,1354.3,Medium
+271,24,5,Inter-State,1838.2,High
+272,14,5,National Long-Haul,1518.6,Medium
+273,10,7,National Long-Haul,593.5,Medium
+274,24,12,Intra-State,303.9,Medium
+275,22,18,Inter-State,788.5,High
+276,5,20,National Long-Haul,784.7,Low
+277,9,6,Inter-State,1669.3,Low
+278,21,22,National Long-Haul,888.9,Low
+279,5,20,National Long-Haul,610.7,Low
+280,4,12,Inter-State,654.2,High
+281,22,10,National Long-Haul,894.3,Medium
+282,12,22,National Long-Haul,1375.6,Low
+283,2,24,Inter-State,1308.6,Medium
+284,5,13,Inter-State,390.2,Low
+285,1,22,National Long-Haul,2139.8,High
+286,20,11,Inter-State,2165.9,High
+287,12,6,Inter-State,1763.2,Low
+288,13,5,Inter-State,1404.2,Medium
+289,22,4,Inter-State,1796.4,High
+290,11,3,National Long-Haul,2177.2,Medium
+291,23,24,Inter-State,721.9,High
+292,1,20,Inter-State,1396.5,Medium
+293,21,8,Inter-State,1834.0,Low
+294,9,24,Inter-State,1690.0,Medium
+295,3,4,Inter-State,508.1,Low
+296,14,7,Inter-State,1889.8,High
+297,4,10,Inter-State,560.2,High
+298,7,5,National Long-Haul,374.6,Medium
+299,12,3,Inter-State,348.1,Medium
+300,1,20,Inter-State,1944.3,High
+301,16,18,National Long-Haul,1444.9,High
+302,19,20,Inter-State,548.5,Medium
+303,10,13,Inter-State,1451.2,High
+304,19,13,National Long-Haul,1884.3,Low
+305,23,17,Inter-State,2166.6,High
+306,5,18,Inter-State,447.4,Medium
+307,3,13,Inter-State,985.3,Low
+308,24,13,Inter-State,677.7,Medium
+309,3,22,Inter-State,1910.2,Medium
+310,22,23,National Long-Haul,1025.4,Medium
+311,3,4,Inter-State,2045.7,Medium
+312,14,6,National Long-Haul,572.7,Medium
+313,15,14,Inter-State,542.3,High
+314,11,25,Intra-State,289.9,Medium
+315,3,12,Inter-State,790.2,Low
+316,7,20,National Long-Haul,1497.9,High
+317,15,14,Inter-State,1402.6,Medium
+318,5,11,Inter-State,616.6,Medium
+319,23,22,National Long-Haul,2048.0,High
+320,23,13,Inter-State,753.3,Low
+321,5,14,Inter-State,940.6,High
+322,19,25,National Long-Haul,805.6,Medium
+323,15,13,National Long-Haul,1613.1,Low
+324,12,20,National Long-Haul,499.5,High
+325,13,9,Inter-State,1497.9,High
+326,7,19,National Long-Haul,2127.7,Low
+327,22,4,Inter-State,1972.4,High
+328,17,7,Inter-State,1324.8,High
+329,14,25,National Long-Haul,1768.9,High
+330,8,4,National Long-Haul,1993.8,Low
+331,22,21,Inter-State,1169.5,Low
+332,20,25,Inter-State,1541.1,High
+333,23,19,National Long-Haul,1900.6,High
+334,20,7,National Long-Haul,2194.6,Low
+335,22,15,National Long-Haul,1519.3,Medium
+336,22,9,Inter-State,944.0,Low
+337,7,11,National Long-Haul,1016.0,Medium
+338,2,7,National Long-Haul,1677.4,Medium
+339,25,1,Inter-State,340.3,Low
+340,3,18,Inter-State,391.6,Medium
+341,5,3,National Long-Haul,1379.9,Medium
+342,1,10,Inter-State,514.4,Medium
+343,13,25,Inter-State,2142.2,High
+344,8,4,Inter-State,1494.5,Low
+345,7,4,National Long-Haul,539.5,Low
+346,24,17,National Long-Haul,713.7,Medium
+347,15,25,National Long-Haul,500.0,Medium
+348,9,19,National Long-Haul,1466.4,Low
+349,18,2,National Long-Haul,1603.9,High
+350,17,7,National Long-Haul,1380.7,Low

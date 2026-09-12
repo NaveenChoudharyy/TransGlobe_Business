@@ -1,0 +1,31 @@
+WarehouseID,WarehouseName,LocationID,WarehouseType,CapacityUnits,AutomationLevel
+1,Warehouse_001,2,Regional Hub,17715,Medium
+2,Warehouse_002,13,Fulfillment Center,34039,High
+3,Warehouse_003,14,Regional Hub,44670,High
+4,Warehouse_004,19,Regional Hub,39380,Low
+5,Warehouse_005,17,Regional Hub,22991,Low
+6,Warehouse_006,11,Regional Hub,20672,Medium
+7,Warehouse_007,3,Cross-Dock,9875,Low
+8,Warehouse_008,10,Regional Hub,42334,Low
+9,Warehouse_009,7,Fulfillment Center,49310,Medium
+10,Warehouse_010,6,Fulfillment Center,27507,Low
+11,Warehouse_011,19,Fulfillment Center,27485,Low
+12,Warehouse_012,12,Fulfillment Center,43176,Medium
+13,Warehouse_013,20,Fulfillment Center,20406,High
+14,Warehouse_014,4,Cross-Dock,23294,Medium
+15,Warehouse_015,25,Regional Hub,45212,Low
+16,Warehouse_016,12,Cross-Dock,22070,Medium
+17,Warehouse_017,7,Regional Hub,46733,High
+18,Warehouse_018,10,Fulfillment Center,12263,Low
+19,Warehouse_019,22,Fulfillment Center,27356,Medium
+20,Warehouse_020,18,Regional Hub,27038,Medium
+21,Warehouse_021,5,Regional Hub,18802,Medium
+22,Warehouse_022,25,Regional Hub,48336,Low
+23,Warehouse_023,4,Regional Hub,26718,High
+24,Warehouse_024,7,Fulfillment Center,44556,Low
+25,Warehouse_025,19,Regional Hub,14867,Low
+26,Warehouse_026,14,Cross-Dock,20702,Low
+27,Warehouse_027,12,Cross-Dock,26520,Medium
+28,Warehouse_028,24,Regional Hub,30379,Low
+29,Warehouse_029,20,Regional Hub,15324,Medium
+30,Warehouse_030,25,Fulfillment Center,19089,High

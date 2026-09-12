@@ -1,0 +1,901 @@
+EmployeeID,WarehouseID,Role,ExperienceYears,ShiftType
+1,19,Supervisor,2.8,Night
+2,12,Loader,5.3,Day
+3,4,Driver Coordinator,4.5,Night
+4,19,Warehouse Associate,4.3,Day
+5,20,Warehouse Associate,1.6,Night
+6,30,Dispatch Coordinator,3.2,Night
+7,11,Warehouse Associate,2.2,Night
+8,9,Warehouse Associate,6.3,Night
+9,25,Driver Coordinator,8.5,Day
+10,11,Warehouse Associate,1.1,Night
+11,19,Warehouse Associate,3.5,Day
+12,23,Warehouse Associate,2.1,Night
+13,27,Dispatch Coordinator,4.7,Day
+14,10,Loader,13.8,Day
+15,19,Warehouse Associate,6.8,Day
+16,4,Supervisor,5.0,Rotational
+17,24,Supervisor,6.1,Night
+18,2,Warehouse Associate,9.2,Day
+19,21,Supervisor,6.4,Night
+20,7,Dispatch Coordinator,1.3,Day
+21,14,Dispatch Coordinator,10.7,Day
+22,3,Driver Coordinator,3.8,Day
+23,21,Driver Coordinator,4.6,Rotational
+24,15,Dispatch Coordinator,8.0,Rotational
+25,20,Dispatch Coordinator,13.3,Rotational
+26,11,Warehouse Associate,2.5,Day
+27,1,Loader,7.7,Day
+28,18,Loader,2.4,Rotational
+29,21,Warehouse Associate,4.3,Day
+30,20,Driver Coordinator,1.0,Night
+31,8,Loader,2.4,Rotational
+32,22,Warehouse Associate,4.2,Day
+33,17,Driver Coordinator,5.2,Day
+34,7,Loader,5.0,Rotational
+35,4,Dispatch Coordinator,7.0,Night
+36,10,Loader,2.7,Rotational
+37,1,Driver Coordinator,3.3,Night
+38,22,Driver Coordinator,3.4,Day
+39,1,Warehouse Associate,2.8,Rotational
+40,2,Loader,1.7,Rotational
+41,5,Driver Coordinator,3.8,Rotational
+42,10,Driver Coordinator,6.3,Day
+43,1,Warehouse Associate,4.5,Night
+44,19,Loader,2.6,Day
+45,4,Driver Coordinator,3.9,Day
+46,25,Warehouse Associate,2.4,Rotational
+47,17,Dispatch Coordinator,5.3,Rotational
+48,3,Loader,6.4,Night
+49,13,Loader,6.5,Rotational
+50,5,Loader,3.1,Day
+51,30,Warehouse Associate,2.5,Rotational
+52,18,Supervisor,7.0,Night
+53,25,Warehouse Associate,2.9,Night
+54,12,Supervisor,3.8,Night
+55,5,Dispatch Coordinator,4.5,Night
+56,8,Warehouse Associate,3.6,Rotational
+57,13,Driver Coordinator,5.9,Day
+58,24,Supervisor,1.1,Rotational
+59,13,Dispatch Coordinator,5.0,Day
+60,28,Warehouse Associate,1.9,Day
+61,11,Loader,2.6,Night
+62,7,Driver Coordinator,4.1,Rotational
+63,15,Warehouse Associate,0.8,Rotational
+64,4,Driver Coordinator,3.2,Day
+65,21,Dispatch Coordinator,2.8,Day
+66,4,Loader,3.3,Night
+67,20,Dispatch Coordinator,2.7,Rotational
+68,12,Warehouse Associate,3.9,Rotational
+69,11,Driver Coordinator,2.4,Rotational
+70,19,Warehouse Associate,3.5,Day
+71,22,Driver Coordinator,4.1,Rotational
+72,28,Warehouse Associate,7.2,Day
+73,9,Warehouse Associate,8.3,Rotational
+74,25,Driver Coordinator,1.2,Night
+75,26,Loader,7.6,Day
+76,30,Warehouse Associate,1.7,Night
+77,29,Loader,3.5,Rotational
+78,24,Warehouse Associate,0.9,Day
+79,9,Driver Coordinator,0.5,Day
+80,21,Warehouse Associate,13.3,Night
+81,24,Loader,3.6,Rotational
+82,9,Warehouse Associate,3.0,Night
+83,25,Loader,4.5,Day
+84,22,Driver Coordinator,3.1,Night
+85,15,Supervisor,6.4,Day
+86,26,Dispatch Coordinator,4.3,Day
+87,3,Warehouse Associate,5.7,Day
+88,21,Warehouse Associate,1.9,Day
+89,24,Driver Coordinator,1.0,Day
+90,2,Warehouse Associate,6.8,Day
+91,13,Loader,4.6,Day
+92,16,Dispatch Coordinator,1.3,Night
+93,7,Driver Coordinator,1.4,Day
+94,27,Loader,3.9,Day
+95,19,Loader,5.4,Night
+96,9,Driver Coordinator,1.7,Rotational
+97,14,Driver Coordinator,9.5,Rotational
+98,4,Loader,5.9,Day
+99,3,Supervisor,7.2,Night
+100,23,Loader,3.8,Rotational
+101,30,Dispatch Coordinator,3.6,Night
+102,9,Warehouse Associate,1.2,Night
+103,8,Loader,2.0,Day
+104,21,Loader,3.3,Day
+105,16,Warehouse Associate,4.7,Day
+106,5,Warehouse Associate,4.1,Day
+107,21,Loader,0.6,Rotational
+108,7,Warehouse Associate,1.6,Day
+109,4,Loader,4.3,Night
+110,14,Loader,4.8,Rotational
+111,23,Dispatch Coordinator,2.6,Night
+112,16,Warehouse Associate,5.5,Day
+113,20,Dispatch Coordinator,5.5,Rotational
+114,8,Dispatch Coordinator,12.7,Day
+115,15,Loader,3.6,Day
+116,22,Loader,2.6,Day
+117,16,Driver Coordinator,1.7,Day
+118,8,Warehouse Associate,1.1,Rotational
+119,29,Loader,5.3,Day
+120,3,Dispatch Coordinator,4.9,Rotational
+121,28,Supervisor,1.2,Day
+122,22,Warehouse Associate,5.3,Rotational
+123,4,Loader,4.0,Day
+124,8,Loader,2.9,Rotational
+125,12,Dispatch Coordinator,0.6,Day
+126,29,Driver Coordinator,4.9,Rotational
+127,16,Warehouse Associate,10.3,Rotational
+128,8,Warehouse Associate,1.9,Night
+129,28,Loader,4.0,Day
+130,4,Loader,5.1,Night
+131,25,Warehouse Associate,0.3,Night
+132,25,Dispatch Coordinator,1.7,Night
+133,12,Warehouse Associate,0.9,Night
+134,2,Driver Coordinator,10.3,Rotational
+135,27,Loader,0.3,Rotational
+136,30,Warehouse Associate,2.9,Night
+137,12,Dispatch Coordinator,4.3,Day
+138,6,Driver Coordinator,1.9,Day
+139,9,Driver Coordinator,0.4,Night
+140,5,Warehouse Associate,2.9,Rotational
+141,19,Loader,1.9,Day
+142,16,Warehouse Associate,4.7,Day
+143,11,Warehouse Associate,5.9,Day
+144,20,Driver Coordinator,1.2,Day
+145,19,Driver Coordinator,2.0,Rotational
+146,1,Warehouse Associate,2.1,Night
+147,13,Driver Coordinator,5.9,Day
+148,26,Loader,3.7,Day
+149,24,Supervisor,1.3,Day
+150,26,Supervisor,7.2,Night
+151,29,Loader,1.9,Night
+152,2,Driver Coordinator,2.3,Day
+153,9,Warehouse Associate,1.6,Day
+154,14,Loader,3.9,Rotational
+155,16,Dispatch Coordinator,2.6,Rotational
+156,24,Supervisor,8.6,Night
+157,22,Warehouse Associate,3.7,Day
+158,22,Dispatch Coordinator,1.6,Rotational
+159,5,Supervisor,3.4,Night
+160,21,Dispatch Coordinator,9.4,Rotational
+161,24,Warehouse Associate,1.1,Day
+162,23,Warehouse Associate,4.9,Day
+163,18,Loader,0.6,Day
+164,3,Warehouse Associate,8.2,Rotational
+165,5,Dispatch Coordinator,2.4,Night
+166,23,Loader,1.6,Day
+167,27,Driver Coordinator,9.0,Rotational
+168,25,Supervisor,3.3,Rotational
+169,13,Warehouse Associate,3.4,Day
+170,18,Driver Coordinator,2.4,Night
+171,6,Supervisor,2.5,Night
+172,18,Loader,0.5,Day
+173,6,Loader,4.8,Night
+174,24,Warehouse Associate,0.9,Day
+175,24,Loader,6.5,Rotational
+176,2,Loader,1.4,Rotational
+177,29,Dispatch Coordinator,3.6,Rotational
+178,24,Warehouse Associate,2.1,Rotational
+179,12,Warehouse Associate,2.4,Day
+180,14,Loader,2.8,Day
+181,3,Warehouse Associate,4.3,Night
+182,29,Loader,8.9,Day
+183,4,Supervisor,2.4,Night
+184,28,Dispatch Coordinator,0.4,Day
+185,20,Warehouse Associate,7.6,Day
+186,28,Warehouse Associate,5.3,Night
+187,12,Dispatch Coordinator,1.3,Night
+188,27,Supervisor,1.1,Night
+189,13,Loader,4.4,Night
+190,11,Driver Coordinator,3.9,Day
+191,11,Driver Coordinator,10.4,Rotational
+192,29,Warehouse Associate,4.9,Night
+193,14,Loader,2.0,Night
+194,15,Dispatch Coordinator,1.6,Day
+195,20,Dispatch Coordinator,3.5,Night
+196,17,Dispatch Coordinator,0.5,Day
+197,17,Dispatch Coordinator,0.8,Night
+198,12,Loader,1.2,Day
+199,5,Loader,1.9,Rotational
+200,30,Dispatch Coordinator,3.2,Rotational
+201,15,Warehouse Associate,5.1,Night
+202,30,Loader,7.9,Rotational
+203,14,Loader,6.9,Night
+204,18,Loader,6.2,Day
+205,17,Warehouse Associate,2.3,Night
+206,29,Warehouse Associate,1.7,Rotational
+207,4,Supervisor,4.4,Day
+208,16,Loader,4.6,Day
+209,5,Warehouse Associate,1.3,Night
+210,27,Dispatch Coordinator,2.8,Day
+211,16,Dispatch Coordinator,1.5,Night
+212,28,Loader,0.7,Night
+213,9,Warehouse Associate,4.1,Rotational
+214,5,Loader,6.1,Day
+215,19,Driver Coordinator,9.7,Day
+216,5,Dispatch Coordinator,2.9,Rotational
+217,12,Dispatch Coordinator,0.6,Day
+218,10,Warehouse Associate,10.9,Night
+219,7,Warehouse Associate,11.5,Day
+220,4,Driver Coordinator,18.6,Day
+221,20,Driver Coordinator,13.9,Day
+222,23,Warehouse Associate,4.0,Day
+223,12,Driver Coordinator,3.3,Night
+224,9,Warehouse Associate,5.7,Night
+225,5,Loader,0.9,Rotational
+226,21,Loader,1.8,Rotational
+227,25,Dispatch Coordinator,3.0,Day
+228,17,Loader,7.1,Day
+229,13,Loader,7.3,Rotational
+230,20,Warehouse Associate,3.1,Day
+231,28,Driver Coordinator,1.0,Day
+232,30,Warehouse Associate,6.0,Day
+233,6,Warehouse Associate,0.9,Night
+234,15,Driver Coordinator,2.1,Day
+235,27,Dispatch Coordinator,3.9,Day
+236,19,Dispatch Coordinator,0.8,Night
+237,25,Warehouse Associate,1.7,Rotational
+238,30,Warehouse Associate,6.7,Day
+239,4,Warehouse Associate,5.7,Night
+240,19,Dispatch Coordinator,1.1,Day
+241,16,Loader,4.3,Day
+242,9,Dispatch Coordinator,0.6,Day
+243,20,Driver Coordinator,5.3,Day
+244,4,Driver Coordinator,1.9,Day
+245,15,Dispatch Coordinator,2.8,Rotational
+246,13,Driver Coordinator,3.6,Day
+247,12,Driver Coordinator,1.2,Rotational
+248,19,Driver Coordinator,1.8,Day
+249,29,Loader,10.0,Day
+250,29,Warehouse Associate,2.7,Night
+251,22,Warehouse Associate,3.7,Rotational
+252,10,Driver Coordinator,3.8,Day
+253,29,Loader,8.1,Day
+254,30,Driver Coordinator,5.9,Night
+255,26,Loader,1.3,Day
+256,27,Warehouse Associate,8.8,Night
+257,25,Dispatch Coordinator,11.0,Rotational
+258,23,Driver Coordinator,1.2,Day
+259,22,Warehouse Associate,2.5,Rotational
+260,20,Loader,3.1,Day
+261,20,Driver Coordinator,2.6,Rotational
+262,12,Warehouse Associate,5.3,Rotational
+263,27,Warehouse Associate,2.8,Night
+264,20,Loader,2.2,Rotational
+265,19,Supervisor,5.5,Rotational
+266,23,Loader,0.4,Day
+267,3,Warehouse Associate,4.0,Day
+268,28,Warehouse Associate,4.8,Day
+269,18,Dispatch Coordinator,8.4,Day
+270,29,Dispatch Coordinator,3.5,Night
+271,4,Warehouse Associate,0.6,Day
+272,8,Supervisor,3.7,Night
+273,29,Warehouse Associate,0.6,Day
+274,21,Supervisor,4.5,Day
+275,20,Driver Coordinator,7.4,Day
+276,13,Loader,3.2,Rotational
+277,17,Loader,2.8,Day
+278,17,Warehouse Associate,5.8,Day
+279,6,Loader,4.4,Day
+280,17,Dispatch Coordinator,5.5,Rotational
+281,16,Warehouse Associate,13.7,Day
+282,10,Loader,2.3,Night
+283,11,Warehouse Associate,4.7,Day
+284,24,Warehouse Associate,8.9,Day
+285,21,Loader,9.0,Night
+286,15,Dispatch Coordinator,5.0,Night
+287,19,Warehouse Associate,2.7,Night
+288,8,Warehouse Associate,5.5,Day
+289,15,Warehouse Associate,5.6,Rotational
+290,17,Loader,6.2,Night
+291,8,Loader,1.3,Rotational
+292,6,Warehouse Associate,10.8,Day
+293,16,Loader,8.9,Day
+294,29,Driver Coordinator,3.3,Day
+295,14,Loader,8.3,Rotational
+296,28,Loader,3.1,Night
+297,26,Loader,9.7,Day
+298,23,Driver Coordinator,3.7,Day
+299,27,Driver Coordinator,1.6,Day
+300,13,Warehouse Associate,12.5,Day
+301,23,Warehouse Associate,6.1,Rotational
+302,5,Warehouse Associate,2.9,Day
+303,10,Supervisor,10.2,Day
+304,17,Warehouse Associate,5.5,Day
+305,2,Driver Coordinator,2.6,Day
+306,23,Warehouse Associate,10.3,Rotational
+307,28,Loader,6.2,Day
+308,4,Warehouse Associate,4.4,Rotational
+309,30,Dispatch Coordinator,3.5,Night
+310,3,Dispatch Coordinator,1.5,Night
+311,4,Loader,0.2,Day
+312,23,Dispatch Coordinator,5.8,Night
+313,21,Dispatch Coordinator,1.3,Night
+314,29,Loader,1.5,Day
+315,13,Driver Coordinator,3.0,Rotational
+316,18,Supervisor,3.1,Day
+317,5,Loader,1.7,Day
+318,21,Dispatch Coordinator,5.8,Day
+319,30,Driver Coordinator,0.7,Night
+320,18,Dispatch Coordinator,5.7,Day
+321,28,Driver Coordinator,2.8,Day
+322,12,Supervisor,1.7,Day
+323,30,Warehouse Associate,0.8,Day
+324,17,Warehouse Associate,4.0,Day
+325,5,Loader,1.2,Rotational
+326,11,Loader,1.0,Day
+327,15,Loader,8.8,Rotational
+328,3,Driver Coordinator,0.9,Night
+329,27,Loader,0.7,Rotational
+330,8,Dispatch Coordinator,5.4,Rotational
+331,21,Loader,4.2,Day
+332,28,Warehouse Associate,2.1,Night
+333,14,Loader,1.5,Day
+334,19,Driver Coordinator,1.8,Day
+335,16,Warehouse Associate,2.2,Day
+336,23,Supervisor,4.9,Night
+337,2,Supervisor,4.0,Rotational
+338,11,Warehouse Associate,2.5,Day
+339,19,Supervisor,2.5,Night
+340,3,Supervisor,5.6,Day
+341,26,Dispatch Coordinator,1.6,Day
+342,19,Warehouse Associate,0.7,Day
+343,1,Warehouse Associate,8.2,Night
+344,1,Loader,2.5,Day
+345,5,Warehouse Associate,11.7,Day
+346,20,Dispatch Coordinator,2.2,Day
+347,16,Driver Coordinator,3.4,Night
+348,15,Loader,1.5,Rotational
+349,17,Loader,4.1,Day
+350,15,Driver Coordinator,2.6,Night
+351,11,Warehouse Associate,2.8,Night
+352,1,Warehouse Associate,3.6,Day
+353,1,Loader,2.3,Day
+354,21,Dispatch Coordinator,4.0,Rotational
+355,23,Warehouse Associate,1.9,Day
+356,8,Supervisor,3.8,Day
+357,8,Warehouse Associate,0.6,Rotational
+358,13,Loader,0.9,Rotational
+359,20,Loader,1.5,Night
+360,18,Loader,1.1,Rotational
+361,17,Dispatch Coordinator,1.2,Day
+362,2,Warehouse Associate,4.7,Rotational
+363,13,Driver Coordinator,2.6,Day
+364,23,Driver Coordinator,2.3,Rotational
+365,18,Dispatch Coordinator,4.0,Day
+366,25,Warehouse Associate,4.2,Day
+367,21,Loader,2.1,Day
+368,27,Dispatch Coordinator,6.8,Rotational
+369,18,Warehouse Associate,2.7,Night
+370,18,Warehouse Associate,5.1,Rotational
+371,17,Warehouse Associate,1.9,Day
+372,8,Dispatch Coordinator,3.9,Day
+373,14,Warehouse Associate,5.4,Night
+374,6,Supervisor,5.0,Day
+375,13,Dispatch Coordinator,4.6,Night
+376,5,Dispatch Coordinator,1.8,Rotational
+377,15,Warehouse Associate,1.1,Night
+378,29,Driver Coordinator,0.9,Day
+379,14,Warehouse Associate,2.2,Night
+380,23,Warehouse Associate,2.1,Rotational
+381,14,Loader,4.3,Night
+382,28,Loader,3.3,Rotational
+383,7,Supervisor,1.0,Day
+384,26,Dispatch Coordinator,6.1,Night
+385,22,Dispatch Coordinator,3.7,Day
+386,27,Warehouse Associate,1.7,Night
+387,4,Loader,1.9,Rotational
+388,27,Dispatch Coordinator,8.1,Rotational
+389,28,Dispatch Coordinator,1.1,Day
+390,9,Warehouse Associate,8.4,Rotational
+391,19,Driver Coordinator,2.6,Day
+392,18,Warehouse Associate,2.7,Day
+393,2,Warehouse Associate,4.0,Night
+394,16,Driver Coordinator,0.7,Day
+395,20,Loader,3.7,Day
+396,7,Loader,5.3,Night
+397,11,Loader,2.1,Night
+398,18,Warehouse Associate,3.1,Night
+399,28,Supervisor,11.8,Night
+400,2,Warehouse Associate,5.7,Night
+401,29,Driver Coordinator,1.4,Day
+402,25,Warehouse Associate,2.0,Day
+403,26,Loader,2.5,Night
+404,2,Loader,6.0,Night
+405,18,Warehouse Associate,1.4,Day
+406,12,Dispatch Coordinator,5.0,Day
+407,28,Supervisor,5.0,Rotational
+408,23,Warehouse Associate,3.2,Rotational
+409,20,Driver Coordinator,6.1,Night
+410,1,Warehouse Associate,1.5,Rotational
+411,27,Loader,7.0,Rotational
+412,15,Loader,0.6,Night
+413,5,Dispatch Coordinator,1.4,Day
+414,27,Loader,0.6,Night
+415,28,Loader,1.6,Rotational
+416,15,Loader,5.1,Night
+417,20,Loader,4.2,Day
+418,19,Loader,3.7,Rotational
+419,10,Dispatch Coordinator,1.6,Rotational
+420,23,Warehouse Associate,3.0,Day
+421,30,Warehouse Associate,7.1,Rotational
+422,29,Loader,1.6,Night
+423,21,Driver Coordinator,1.7,Rotational
+424,11,Warehouse Associate,1.8,Rotational
+425,28,Loader,3.6,Day
+426,28,Warehouse Associate,4.7,Rotational
+427,1,Loader,5.5,Day
+428,11,Loader,2.5,Rotational
+429,17,Loader,2.3,Rotational
+430,18,Loader,2.0,Rotational
+431,22,Supervisor,4.5,Rotational
+432,16,Warehouse Associate,0.7,Rotational
+433,1,Loader,2.8,Day
+434,5,Warehouse Associate,2.8,Day
+435,23,Driver Coordinator,5.0,Day
+436,21,Supervisor,1.0,Rotational
+437,20,Warehouse Associate,5.3,Night
+438,14,Warehouse Associate,4.3,Night
+439,9,Dispatch Coordinator,10.1,Day
+440,10,Driver Coordinator,8.8,Night
+441,21,Warehouse Associate,6.7,Day
+442,16,Loader,0.4,Rotational
+443,4,Dispatch Coordinator,1.1,Rotational
+444,12,Loader,6.2,Night
+445,25,Loader,2.7,Rotational
+446,18,Warehouse Associate,8.8,Day
+447,26,Supervisor,3.3,Day
+448,16,Warehouse Associate,4.9,Night
+449,15,Supervisor,4.7,Night
+450,29,Warehouse Associate,3.2,Day
+451,16,Loader,6.2,Day
+452,5,Dispatch Coordinator,5.2,Night
+453,13,Loader,1.2,Day
+454,20,Warehouse Associate,12.4,Day
+455,11,Loader,1.1,Day
+456,13,Warehouse Associate,1.7,Rotational
+457,27,Dispatch Coordinator,4.9,Day
+458,14,Supervisor,4.2,Day
+459,10,Dispatch Coordinator,5.5,Day
+460,4,Dispatch Coordinator,2.6,Day
+461,13,Loader,4.5,Rotational
+462,23,Dispatch Coordinator,1.8,Day
+463,9,Driver Coordinator,3.3,Day
+464,15,Dispatch Coordinator,8.1,Rotational
+465,20,Driver Coordinator,1.1,Rotational
+466,28,Driver Coordinator,6.5,Day
+467,25,Dispatch Coordinator,2.8,Day
+468,9,Dispatch Coordinator,1.5,Rotational
+469,5,Loader,1.6,Night
+470,21,Supervisor,2.7,Rotational
+471,8,Warehouse Associate,6.7,Day
+472,12,Warehouse Associate,4.4,Rotational
+473,4,Warehouse Associate,1.0,Day
+474,24,Supervisor,6.3,Day
+475,5,Loader,5.6,Rotational
+476,12,Warehouse Associate,0.6,Night
+477,13,Loader,1.4,Day
+478,2,Supervisor,7.2,Day
+479,24,Driver Coordinator,3.2,Rotational
+480,19,Warehouse Associate,6.2,Day
+481,17,Dispatch Coordinator,0.3,Day
+482,6,Dispatch Coordinator,0.1,Day
+483,2,Loader,5.1,Day
+484,2,Warehouse Associate,2.0,Rotational
+485,19,Warehouse Associate,5.3,Day
+486,23,Supervisor,6.3,Night
+487,24,Loader,2.0,Night
+488,25,Warehouse Associate,3.0,Day
+489,12,Dispatch Coordinator,2.5,Night
+490,1,Warehouse Associate,2.0,Day
+491,8,Dispatch Coordinator,3.8,Rotational
+492,24,Dispatch Coordinator,5.9,Rotational
+493,23,Warehouse Associate,1.7,Rotational
+494,16,Warehouse Associate,1.7,Day
+495,1,Driver Coordinator,2.0,Rotational
+496,24,Driver Coordinator,4.9,Night
+497,25,Warehouse Associate,6.3,Day
+498,7,Loader,2.5,Day
+499,25,Warehouse Associate,0.4,Day
+500,20,Supervisor,1.3,Day
+501,27,Driver Coordinator,2.3,Day
+502,19,Loader,1.5,Rotational
+503,3,Loader,1.0,Rotational
+504,20,Dispatch Coordinator,3.3,Day
+505,4,Warehouse Associate,14.4,Rotational
+506,8,Dispatch Coordinator,1.3,Night
+507,27,Warehouse Associate,3.8,Day
+508,30,Loader,4.7,Rotational
+509,15,Dispatch Coordinator,5.0,Night
+510,9,Warehouse Associate,3.1,Night
+511,12,Loader,1.0,Day
+512,8,Supervisor,5.8,Day
+513,18,Loader,0.7,Rotational
+514,13,Loader,2.8,Day
+515,2,Supervisor,2.6,Day
+516,19,Warehouse Associate,1.1,Day
+517,20,Loader,2.0,Day
+518,21,Dispatch Coordinator,4.9,Day
+519,29,Warehouse Associate,2.8,Rotational
+520,22,Driver Coordinator,0.8,Day
+521,21,Dispatch Coordinator,5.4,Rotational
+522,7,Dispatch Coordinator,9.9,Night
+523,14,Warehouse Associate,0.9,Night
+524,14,Driver Coordinator,3.0,Day
+525,29,Driver Coordinator,3.1,Day
+526,15,Warehouse Associate,0.9,Rotational
+527,21,Loader,7.4,Rotational
+528,17,Warehouse Associate,3.1,Day
+529,2,Loader,6.0,Rotational
+530,29,Dispatch Coordinator,4.0,Rotational
+531,21,Warehouse Associate,7.2,Day
+532,7,Loader,4.0,Night
+533,2,Driver Coordinator,2.2,Rotational
+534,29,Dispatch Coordinator,4.6,Rotational
+535,10,Warehouse Associate,1.6,Day
+536,1,Driver Coordinator,4.9,Day
+537,19,Warehouse Associate,1.3,Day
+538,1,Dispatch Coordinator,2.9,Day
+539,7,Loader,2.5,Day
+540,27,Warehouse Associate,3.8,Night
+541,2,Warehouse Associate,8.0,Night
+542,23,Warehouse Associate,2.0,Day
+543,19,Warehouse Associate,5.7,Night
+544,10,Loader,7.3,Day
+545,9,Supervisor,5.6,Day
+546,15,Warehouse Associate,3.7,Rotational
+547,16,Loader,3.6,Rotational
+548,27,Dispatch Coordinator,1.9,Day
+549,8,Warehouse Associate,0.7,Rotational
+550,18,Loader,3.2,Rotational
+551,21,Warehouse Associate,7.8,Night
+552,1,Loader,8.5,Rotational
+553,27,Dispatch Coordinator,0.8,Day
+554,30,Loader,8.3,Day
+555,3,Driver Coordinator,4.7,Rotational
+556,8,Warehouse Associate,4.4,Day
+557,24,Driver Coordinator,7.7,Day
+558,25,Warehouse Associate,6.3,Day
+559,5,Warehouse Associate,1.3,Day
+560,28,Warehouse Associate,1.7,Day
+561,10,Supervisor,0.6,Day
+562,9,Loader,4.2,Rotational
+563,11,Driver Coordinator,1.5,Day
+564,21,Loader,2.1,Rotational
+565,7,Dispatch Coordinator,7.1,Day
+566,17,Driver Coordinator,4.6,Day
+567,3,Driver Coordinator,4.7,Rotational
+568,5,Supervisor,12.2,Day
+569,24,Loader,0.1,Day
+570,12,Supervisor,1.5,Rotational
+571,24,Warehouse Associate,2.5,Day
+572,23,Driver Coordinator,1.6,Day
+573,30,Driver Coordinator,5.9,Rotational
+574,5,Loader,2.7,Day
+575,29,Warehouse Associate,1.2,Night
+576,27,Warehouse Associate,4.0,Day
+577,14,Driver Coordinator,4.5,Day
+578,5,Driver Coordinator,1.3,Day
+579,5,Loader,2.8,Night
+580,16,Driver Coordinator,4.5,Day
+581,1,Loader,7.4,Rotational
+582,3,Driver Coordinator,1.8,Rotational
+583,16,Warehouse Associate,4.9,Night
+584,17,Warehouse Associate,2.0,Day
+585,26,Loader,3.4,Night
+586,30,Dispatch Coordinator,1.4,Night
+587,9,Dispatch Coordinator,4.8,Day
+588,10,Supervisor,6.5,Rotational
+589,6,Warehouse Associate,2.9,Day
+590,7,Loader,2.6,Rotational
+591,14,Warehouse Associate,2.4,Rotational
+592,30,Supervisor,1.1,Day
+593,27,Warehouse Associate,5.5,Day
+594,28,Loader,7.3,Night
+595,14,Loader,1.7,Night
+596,20,Dispatch Coordinator,3.8,Rotational
+597,22,Warehouse Associate,4.7,Day
+598,8,Warehouse Associate,2.0,Night
+599,14,Dispatch Coordinator,8.5,Rotational
+600,17,Warehouse Associate,3.8,Rotational
+601,12,Warehouse Associate,0.8,Day
+602,15,Loader,6.8,Rotational
+603,14,Warehouse Associate,3.0,Day
+604,2,Warehouse Associate,2.3,Night
+605,24,Dispatch Coordinator,5.2,Day
+606,28,Dispatch Coordinator,2.1,Night
+607,23,Loader,8.1,Day
+608,29,Loader,7.0,Day
+609,13,Loader,8.9,Day
+610,2,Dispatch Coordinator,11.8,Rotational
+611,9,Dispatch Coordinator,4.7,Night
+612,26,Warehouse Associate,3.2,Night
+613,5,Loader,2.0,Night
+614,17,Dispatch Coordinator,5.0,Day
+615,1,Supervisor,11.5,Day
+616,10,Loader,1.1,Day
+617,4,Loader,4.1,Day
+618,4,Loader,0.8,Rotational
+619,5,Driver Coordinator,0.8,Day
+620,17,Dispatch Coordinator,7.4,Night
+621,21,Dispatch Coordinator,6.6,Rotational
+622,9,Driver Coordinator,1.9,Rotational
+623,25,Loader,1.3,Day
+624,12,Dispatch Coordinator,9.1,Rotational
+625,23,Warehouse Associate,1.4,Night
+626,16,Warehouse Associate,1.0,Night
+627,22,Supervisor,1.4,Rotational
+628,30,Warehouse Associate,4.4,Day
+629,30,Warehouse Associate,12.8,Rotational
+630,18,Warehouse Associate,2.0,Night
+631,29,Driver Coordinator,7.4,Rotational
+632,22,Loader,3.6,Rotational
+633,9,Dispatch Coordinator,0.4,Night
+634,29,Driver Coordinator,2.1,Day
+635,5,Dispatch Coordinator,6.7,Day
+636,15,Supervisor,6.4,Rotational
+637,5,Loader,1.8,Night
+638,24,Dispatch Coordinator,5.5,Rotational
+639,27,Supervisor,3.0,Day
+640,25,Driver Coordinator,4.3,Night
+641,4,Warehouse Associate,7.6,Rotational
+642,9,Warehouse Associate,1.9,Rotational
+643,11,Supervisor,2.4,Day
+644,4,Dispatch Coordinator,7.7,Day
+645,16,Loader,12.0,Rotational
+646,2,Warehouse Associate,6.1,Rotational
+647,19,Supervisor,4.1,Day
+648,18,Loader,6.1,Night
+649,18,Driver Coordinator,2.1,Day
+650,28,Dispatch Coordinator,3.4,Day
+651,24,Driver Coordinator,0.8,Day
+652,8,Loader,2.1,Day
+653,18,Loader,4.5,Rotational
+654,25,Loader,3.8,Day
+655,26,Dispatch Coordinator,0.3,Rotational
+656,20,Loader,2.7,Day
+657,3,Warehouse Associate,3.7,Day
+658,14,Dispatch Coordinator,3.8,Day
+659,26,Loader,1.0,Day
+660,3,Warehouse Associate,5.5,Night
+661,18,Loader,10.9,Rotational
+662,17,Dispatch Coordinator,6.0,Rotational
+663,7,Warehouse Associate,3.4,Rotational
+664,11,Loader,9.3,Rotational
+665,30,Warehouse Associate,2.1,Rotational
+666,18,Driver Coordinator,5.0,Night
+667,29,Driver Coordinator,3.1,Night
+668,15,Dispatch Coordinator,9.3,Day
+669,26,Dispatch Coordinator,1.4,Day
+670,19,Warehouse Associate,1.4,Night
+671,28,Supervisor,7.9,Night
+672,10,Warehouse Associate,4.8,Day
+673,12,Driver Coordinator,8.3,Rotational
+674,2,Driver Coordinator,1.6,Day
+675,7,Warehouse Associate,1.8,Night
+676,5,Loader,4.2,Rotational
+677,6,Dispatch Coordinator,0.8,Day
+678,10,Loader,4.0,Rotational
+679,27,Warehouse Associate,2.4,Rotational
+680,12,Loader,3.1,Night
+681,25,Warehouse Associate,5.5,Rotational
+682,25,Driver Coordinator,5.7,Night
+683,30,Dispatch Coordinator,10.5,Day
+684,16,Loader,7.1,Night
+685,26,Driver Coordinator,0.4,Day
+686,13,Loader,1.6,Day
+687,19,Loader,1.7,Day
+688,25,Dispatch Coordinator,6.6,Day
+689,5,Dispatch Coordinator,9.5,Rotational
+690,2,Dispatch Coordinator,1.1,Rotational
+691,5,Driver Coordinator,6.7,Rotational
+692,22,Warehouse Associate,3.4,Day
+693,15,Dispatch Coordinator,3.1,Night
+694,9,Supervisor,2.0,Night
+695,24,Dispatch Coordinator,2.7,Day
+696,1,Driver Coordinator,4.0,Night
+697,6,Warehouse Associate,2.2,Day
+698,15,Warehouse Associate,4.6,Rotational
+699,28,Loader,3.1,Day
+700,23,Loader,2.8,Rotational
+701,21,Driver Coordinator,5.3,Rotational
+702,22,Dispatch Coordinator,4.3,Night
+703,10,Warehouse Associate,0.3,Day
+704,14,Dispatch Coordinator,4.8,Day
+705,27,Dispatch Coordinator,4.1,Rotational
+706,22,Loader,7.4,Day
+707,18,Warehouse Associate,4.2,Day
+708,3,Loader,2.6,Rotational
+709,22,Driver Coordinator,2.0,Rotational
+710,11,Dispatch Coordinator,0.7,Night
+711,12,Loader,3.4,Day
+712,21,Warehouse Associate,1.7,Day
+713,12,Supervisor,8.1,Rotational
+714,18,Warehouse Associate,3.5,Day
+715,1,Loader,1.3,Day
+716,6,Dispatch Coordinator,0.5,Day
+717,17,Warehouse Associate,0.7,Night
+718,29,Dispatch Coordinator,4.5,Day
+719,23,Warehouse Associate,8.8,Rotational
+720,13,Driver Coordinator,5.2,Day
+721,30,Warehouse Associate,3.1,Day
+722,9,Driver Coordinator,12.1,Rotational
+723,27,Dispatch Coordinator,6.0,Rotational
+724,13,Warehouse Associate,4.3,Night
+725,3,Dispatch Coordinator,2.5,Rotational
+726,1,Warehouse Associate,9.1,Day
+727,30,Supervisor,2.7,Day
+728,20,Warehouse Associate,1.7,Day
+729,5,Driver Coordinator,3.2,Day
+730,30,Warehouse Associate,3.7,Rotational
+731,2,Warehouse Associate,6.3,Rotational
+732,11,Warehouse Associate,1.7,Day
+733,23,Loader,1.9,Day
+734,2,Loader,2.0,Rotational
+735,28,Driver Coordinator,3.1,Night
+736,21,Dispatch Coordinator,1.3,Day
+737,29,Warehouse Associate,8.1,Day
+738,26,Supervisor,0.7,Day
+739,25,Loader,9.3,Day
+740,7,Supervisor,5.9,Day
+741,7,Dispatch Coordinator,1.6,Night
+742,8,Loader,2.9,Day
+743,5,Warehouse Associate,1.8,Night
+744,20,Driver Coordinator,6.0,Day
+745,2,Warehouse Associate,8.6,Day
+746,13,Supervisor,19.5,Day
+747,18,Warehouse Associate,4.9,Rotational
+748,17,Supervisor,0.7,Rotational
+749,15,Driver Coordinator,1.5,Day
+750,7,Driver Coordinator,4.8,Day
+751,4,Dispatch Coordinator,3.0,Night
+752,30,Dispatch Coordinator,5.9,Day
+753,14,Supervisor,4.3,Night
+754,18,Loader,1.6,Rotational
+755,18,Loader,2.6,Day
+756,12,Warehouse Associate,6.1,Night
+757,22,Dispatch Coordinator,4.5,Night
+758,12,Dispatch Coordinator,5.9,Night
+759,13,Loader,1.0,Day
+760,25,Warehouse Associate,1.7,Night
+761,10,Dispatch Coordinator,7.7,Day
+762,21,Supervisor,1.1,Night
+763,20,Loader,5.7,Night
+764,1,Driver Coordinator,0.9,Day
+765,21,Warehouse Associate,3.7,Rotational
+766,25,Dispatch Coordinator,2.3,Rotational
+767,9,Loader,1.6,Night
+768,28,Dispatch Coordinator,3.9,Rotational
+769,1,Loader,7.4,Rotational
+770,6,Warehouse Associate,1.9,Day
+771,29,Loader,0.4,Night
+772,26,Warehouse Associate,3.1,Night
+773,23,Loader,1.6,Night
+774,19,Supervisor,6.1,Rotational
+775,7,Warehouse Associate,2.3,Day
+776,15,Dispatch Coordinator,2.0,Day
+777,17,Dispatch Coordinator,2.5,Day
+778,3,Loader,7.4,Rotational
+779,18,Warehouse Associate,4.7,Day
+780,3,Dispatch Coordinator,1.3,Day
+781,4,Supervisor,1.0,Day
+782,6,Loader,9.2,Night
+783,6,Loader,1.9,Day
+784,3,Dispatch Coordinator,7.6,Day
+785,29,Driver Coordinator,3.0,Day
+786,25,Warehouse Associate,1.7,Day
+787,16,Warehouse Associate,1.8,Day
+788,12,Loader,3.1,Day
+789,6,Dispatch Coordinator,0.3,Night
+790,29,Loader,1.8,Day
+791,24,Warehouse Associate,11.5,Day
+792,23,Warehouse Associate,13.8,Night
+793,15,Loader,1.9,Day
+794,1,Warehouse Associate,5.4,Day
+795,20,Loader,4.6,Day
+796,15,Loader,1.2,Day
+797,9,Warehouse Associate,5.5,Night
+798,10,Loader,2.5,Rotational
+799,2,Driver Coordinator,3.6,Day
+800,27,Supervisor,6.3,Night
+801,5,Warehouse Associate,2.6,Rotational
+802,25,Loader,2.6,Day
+803,30,Driver Coordinator,5.1,Rotational
+804,2,Loader,7.7,Night
+805,19,Warehouse Associate,4.9,Night
+806,3,Warehouse Associate,2.7,Rotational
+807,25,Loader,7.2,Day
+808,16,Supervisor,4.4,Rotational
+809,1,Driver Coordinator,8.9,Day
+810,24,Driver Coordinator,10.5,Night
+811,23,Dispatch Coordinator,4.8,Day
+812,28,Loader,8.4,Day
+813,15,Warehouse Associate,8.6,Day
+814,28,Warehouse Associate,3.2,Rotational
+815,20,Warehouse Associate,8.6,Night
+816,16,Driver Coordinator,3.7,Rotational
+817,11,Warehouse Associate,5.9,Day
+818,9,Dispatch Coordinator,3.4,Day
+819,19,Dispatch Coordinator,0.8,Day
+820,23,Dispatch Coordinator,12.6,Day
+821,2,Loader,5.7,Day
+822,13,Warehouse Associate,6.1,Rotational
+823,2,Dispatch Coordinator,4.0,Rotational
+824,12,Dispatch Coordinator,8.6,Day
+825,24,Supervisor,3.2,Day
+826,21,Loader,3.3,Night
+827,4,Supervisor,1.4,Night
+828,22,Dispatch Coordinator,4.3,Night
+829,1,Warehouse Associate,8.3,Night
+830,1,Dispatch Coordinator,3.2,Day
+831,28,Driver Coordinator,1.2,Day
+832,1,Warehouse Associate,7.1,Rotational
+833,8,Warehouse Associate,5.1,Night
+834,4,Driver Coordinator,11.6,Rotational
+835,18,Driver Coordinator,1.8,Day
+836,16,Warehouse Associate,5.7,Night
+837,26,Supervisor,1.1,Day
+838,30,Dispatch Coordinator,3.5,Rotational
+839,23,Dispatch Coordinator,4.0,Day
+840,15,Dispatch Coordinator,0.8,Night
+841,2,Driver Coordinator,7.9,Day
+842,28,Warehouse Associate,6.4,Day
+843,17,Supervisor,5.1,Day
+844,7,Warehouse Associate,1.2,Night
+845,17,Loader,2.0,Rotational
+846,12,Loader,7.0,Rotational
+847,11,Supervisor,3.5,Night
+848,14,Driver Coordinator,2.9,Night
+849,23,Supervisor,8.4,Rotational
+850,5,Loader,3.9,Day
+851,29,Warehouse Associate,1.3,Rotational
+852,2,Driver Coordinator,6.9,Rotational
+853,5,Dispatch Coordinator,1.2,Night
+854,21,Dispatch Coordinator,3.5,Day
+855,5,Loader,4.4,Day
+856,24,Dispatch Coordinator,5.9,Day
+857,23,Loader,0.9,Rotational
+858,13,Dispatch Coordinator,0.3,Night
+859,14,Warehouse Associate,0.3,Night
+860,30,Driver Coordinator,9.2,Day
+861,24,Driver Coordinator,0.8,Rotational
+862,19,Dispatch Coordinator,10.8,Day
+863,5,Driver Coordinator,7.4,Day
+864,18,Dispatch Coordinator,1.6,Night
+865,2,Dispatch Coordinator,0.4,Day
+866,8,Driver Coordinator,3.7,Day
+867,21,Loader,2.3,Day
+868,13,Supervisor,8.5,Day
+869,30,Dispatch Coordinator,4.3,Rotational
+870,29,Dispatch Coordinator,3.5,Rotational
+871,3,Warehouse Associate,3.0,Rotational
+872,27,Driver Coordinator,5.9,Rotational
+873,26,Warehouse Associate,3.3,Day
+874,4,Dispatch Coordinator,12.3,Day
+875,12,Warehouse Associate,0.7,Night
+876,29,Loader,2.7,Day
+877,1,Dispatch Coordinator,5.3,Rotational
+878,2,Supervisor,4.8,Day
+879,16,Loader,12.2,Night
+880,29,Warehouse Associate,1.9,Night
+881,9,Warehouse Associate,0.1,Rotational
+882,24,Warehouse Associate,7.0,Night
+883,21,Loader,4.2,Night
+884,5,Supervisor,7.1,Day
+885,9,Dispatch Coordinator,4.6,Night
+886,19,Loader,0.2,Night
+887,15,Warehouse Associate,4.8,Night
+888,8,Driver Coordinator,1.9,Rotational
+889,7,Driver Coordinator,2.7,Day
+890,17,Supervisor,3.2,Day
+891,25,Warehouse Associate,1.2,Rotational
+892,13,Dispatch Coordinator,1.8,Day
+893,28,Driver Coordinator,6.2,Night
+894,21,Warehouse Associate,6.2,Night
+895,13,Loader,0.6,Rotational
+896,22,Driver Coordinator,4.2,Day
+897,14,Supervisor,6.7,Day
+898,23,Loader,3.9,Rotational
+899,30,Loader,4.4,Night
+900,24,Driver Coordinator,0.7,Night

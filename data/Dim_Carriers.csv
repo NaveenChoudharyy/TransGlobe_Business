@@ -1,0 +1,11 @@
+CarrierID,CarrierName,CarrierType,ServiceLevel,HistoricOnTimeRate
+1,BlueDart Express,Third-Party,Standard,0.9
+2,Swift Cargo,In-House,Express,0.78
+3,FastTrack Logistics,Third-Party,Standard,0.82
+4,DeltaLine Freight,Third-Party,Premium,0.95
+5,Continental Movers,In-House,Standard,0.88
+6,Skyline Transport,Third-Party,Express,0.7
+7,Rapid Roadways,Third-Party,Standard,0.8
+8,Prime Shipping Co,In-House,Premium,0.93
+9,National Carriers,Third-Party,Standard,0.75
+10,Metro Logistics,Third-Party,Express,0.85
