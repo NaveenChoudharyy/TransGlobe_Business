@@ -1,0 +1,88 @@
+Column,Table,Data Type,Description,Example,Variable Type,Nullable,Key / ML Role
+DateKey,Dim_Dates,INT,Surrogate date key (yyyymmdd),20240816,Discrete,No,PK
+FullDate,Dim_Dates,DATE,Calendar date,2024-08-16,Date,No,
+Day,Dim_Dates,TINYINT,Day of month,16,Discrete,No,
+Month,Dim_Dates,TINYINT,Month number,8,Discrete,No,
+MonthName,Dim_Dates,VARCHAR(15),Month name,August,Categorical,No,
+Quarter,Dim_Dates,TINYINT,Calendar quarter,3,Discrete,No,
+Year,Dim_Dates,SMALLINT,Calendar year,2024,Discrete,No,
+DayOfWeek,Dim_Dates,VARCHAR(10),Day name,Friday,Categorical,No,
+IsWeekend,Dim_Dates,BIT,Weekend flag,0,Binary/Flag,No,
+IsHoliday,Dim_Dates,BIT,Public-holiday-like flag,0,Binary/Flag,No,
+LocationID,Dim_Locations,INT,Surrogate location key,7,Discrete,No,PK
+City,Dim_Locations,VARCHAR(50),City name,Bengaluru,Categorical,No,
+State,Dim_Locations,VARCHAR(50),State name,Karnataka,Categorical,No,
+Region,Dim_Locations,VARCHAR(20),Macro region,South,Categorical,No,
+Country,Dim_Locations,VARCHAR(30),Country,India,Categorical,No,
+Zone,Dim_Locations,VARCHAR(10),Internal logistics zone code,Zone-B,Categorical,No,
+CustomerID,Dim_Customers,INT,Surrogate customer key,1690,Discrete,No,PK
+CustomerName,Dim_Customers,VARCHAR(50),Customer display name,Customer_01690,Categorical (ID-like),No,
+Segment,Dim_Customers,VARCHAR(20),"Business segment (contains ~3% dirty lowercase values by design, e.g. 'retail')",Enterprise,Categorical,No,
+LocationID,Dim_Customers,INT,Customer home location,7,Discrete,No,FK -> Dim_Locations
+RegistrationDate,Dim_Customers,DATE,Date customer registered,2021-05-02,Date,No,
+CustomerTier,Dim_Customers,VARCHAR(15),Loyalty tier,Gold,Categorical,No,
+ProductID,Dim_Products,INT,Surrogate product key,456,Discrete,No,PK
+ProductName,Dim_Products,VARCHAR(50),Product display name,Product_00456,Categorical (ID-like),No,
+Category,Dim_Products,VARCHAR(30),Top-level product category,Electronics,Categorical,No,
+SubCategory,Dim_Products,VARCHAR(40),Product subcategory,Mobile Phones,Categorical,No,
+UnitWeightKg,Dim_Products,"DECIMAL(8,2)",Weight of one product unit,2.4,Continuous,No,
+UnitVolumeM3,Dim_Products,"DECIMAL(8,4)",Volume of one product unit,0.03,Continuous,No,
+FragileFlag,Dim_Products,BIT,Whether product is fragile,1,Binary/Flag,No,
+CarrierID,Dim_Carriers,INT,Surrogate carrier key,9,Discrete,No,PK
+CarrierName,Dim_Carriers,VARCHAR(50),Carrier company name,Prime Shipping Co,Categorical,No,
+CarrierType,Dim_Carriers,VARCHAR(20),Ownership model,Third-Party,Categorical,No,
+ServiceLevel,Dim_Carriers,VARCHAR(20),Carrier's general service tier,Express,Categorical,No,
+HistoricOnTimeRate,Dim_Carriers,"DECIMAL(5,4)","Carrier's long-run historic on-time rate. USE WITH CAUTION for ML: acceptable as a feature only if computed strictly from data BEFORE each shipment's date in a real deployment; here it is a static table value, so treat as an approximation / potential leakage risk and validate before using operationally.",0.9,Continuous,No,
+VehicleID,Dim_Vehicles,INT,Surrogate vehicle key,315,Discrete,No,PK
+CarrierID,Dim_Vehicles,INT,Owning carrier,9,Discrete,No,FK -> Dim_Carriers
+VehicleType,Dim_Vehicles,VARCHAR(25),Type of vehicle,Container Truck,Categorical,No,
+CapacityKg,Dim_Vehicles,"DECIMAL(9,1)",Max load capacity,1400.5,Continuous,No,
+FuelType,Dim_Vehicles,VARCHAR(15),Fuel type,Diesel,Categorical,No,
+VehicleAgeYears,Dim_Vehicles,TINYINT,Vehicle age in years,6,Discrete,No,
+WarehouseID,Dim_Warehouses,INT,Surrogate warehouse key,7,Discrete,No,PK
+WarehouseName,Dim_Warehouses,VARCHAR(50),Warehouse name,Warehouse_007,Categorical (ID-like),No,
+LocationID,Dim_Warehouses,INT,Warehouse location,7,Discrete,No,FK -> Dim_Locations
+WarehouseType,Dim_Warehouses,VARCHAR(25),Warehouse function,Regional Hub,Categorical,No,
+CapacityUnits,Dim_Warehouses,INT,Storage capacity in units,32000,Continuous/Discrete,No,
+AutomationLevel,Dim_Warehouses,VARCHAR(10),Degree of process automation,Medium,Categorical,No,
+EmployeeID,Dim_Employees,INT,Surrogate employee key,816,Discrete,No,PK
+WarehouseID,Dim_Employees,INT,Employee's warehouse,7,Discrete,No,FK -> Dim_Warehouses
+Role,Dim_Employees,VARCHAR(30),Job role,Dispatch Coordinator,Categorical,No,
+ExperienceYears,Dim_Employees,"DECIMAL(4,1)",Years of experience,3.5,Continuous,No,
+ShiftType,Dim_Employees,VARCHAR(15),Work shift,Day,Categorical,No,
+RouteID,Dim_Routes,INT,Surrogate route key,27,Discrete,No,PK
+OriginLocationID,Dim_Routes,INT,Route start location,3,Discrete,No,FK -> Dim_Locations
+DestinationLocationID,Dim_Routes,INT,Route end location,7,Discrete,No,FK -> Dim_Locations
+RouteType,Dim_Routes,VARCHAR(25),Route classification,Inter-State,Categorical,No,
+DistanceKm,Dim_Routes,"DECIMAL(8,1)",Standard route distance,826.9,Continuous,No,
+AvgTrafficLevel,Dim_Routes,VARCHAR(10),Route's typical traffic level,High,Categorical,No,
+ShipmentID,Fact_Shipments,INT,Surrogate shipment key (grain: 1 row = 1 shipment),1,Discrete,No,PK
+DateKey,Fact_Shipments,INT,Shipment date,20240816,Discrete,No,FK -> Dim_Dates
+CustomerID,Fact_Shipments,INT,Shipping customer,1690,Discrete,No,FK -> Dim_Customers
+ProductID,Fact_Shipments,INT,Product shipped,456,Discrete,No,FK -> Dim_Products
+CarrierID,Fact_Shipments,INT,Carrier used,9,Discrete,No,FK -> Dim_Carriers
+VehicleID,Fact_Shipments,INT,Vehicle used,315,Discrete,No,FK -> Dim_Vehicles
+WarehouseID,Fact_Shipments,INT,Origin warehouse,7,Discrete,No,FK -> Dim_Warehouses
+EmployeeID,Fact_Shipments,INT,Handling employee (~1% missing by design),816,Discrete,Yes,FK -> Dim_Employees
+RouteID,Fact_Shipments,INT,Route used,27,Discrete,No,FK -> Dim_Routes
+ShipmentStatus,Fact_Shipments,VARCHAR(15),Current shipment status,Delivered,Categorical,No,
+DeliveryMode,Fact_Shipments,VARCHAR(10),Transport mode (~2% dirty lowercase by design),Road,Categorical,No,ML feature
+ShippingPriority,Fact_Shipments,VARCHAR(15),Service priority chosen at booking,Express,Categorical,No,ML feature
+PaymentMethod,Fact_Shipments,VARCHAR(15),Payment method,COD,Categorical,No,ML feature
+WeatherCondition,Fact_Shipments,VARCHAR(15),Weather at time of shipment (~1.5% missing by design),Clear,Categorical,Yes,ML feature
+TrafficCondition,Fact_Shipments,VARCHAR(10),Traffic level on route (~1.5% dirty casing by design),High,Categorical,No,ML feature
+OrderQuantity,Fact_Shipments,INT,Units ordered,21,Discrete,No,ML feature
+PackageWeightKg,Fact_Shipments,"DECIMAL(10,2)","Total package weight (~2% missing, contains outliers by design)",100.7,Continuous,Yes,ML feature
+PackageVolumeM3,Fact_Shipments,"DECIMAL(10,4)",Total package volume (~3% missing by design),0.614,Continuous,Yes,ML feature
+DistanceKm,Fact_Shipments,"DECIMAL(10,1)",Shipment distance (contains a few negative/invalid values by design),826.9,Continuous,No,ML feature
+ShippingCost,Fact_Shipments,"DECIMAL(10,2)","Cost to ship (~1.5% missing, contains outliers by design)",1148.45,Continuous,Yes,ML feature (or business metric)
+OrderValue,Fact_Shipments,"DECIMAL(12,2)",Monetary value of order,6795.59,Continuous,No,ML feature
+HandlingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Hours spent handling at warehouse,0.11,Continuous,No,ML feature
+LoadingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Hours spent loading vehicle,0.83,Continuous,No,ML feature
+WarehouseProcessingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Total warehouse processing time (~2% missing by design),1.96,Continuous,Yes,ML feature
+FuelConsumptionLiters,Fact_Shipments,"DECIMAL(8,2)",Estimated fuel used (~2.5% missing by design),167.59,Continuous,Yes,"ML feature (operational, not usually known pre-delivery -- use with care)"
+PromisedDeliveryDays,Fact_Shipments,TINYINT,Delivery days promised at booking,2,Discrete,No,ML feature -- SAFE (known pre-outcome)
+ActualDeliveryDays,Fact_Shipments,TINYINT,Actual days taken to deliver,1,Discrete,No,DO NOT USE -- target leakage (known only after outcome)
+DeliveryTimeHours,Fact_Shipments,"DECIMAL(8,1)",Actual delivery time in hours (contains outliers by design),24.2,Continuous,No,DO NOT USE -- target leakage (known only after outcome)
+NumPreviousDelaysCustomer,Fact_Shipments,TINYINT,Customer's historic delay count,1,Discrete,No,ML feature
+Late_Delivery,Fact_Shipments,BIT,"TARGET VARIABLE: 1 if delivered late, else 0",0,Binary/Target,No,TARGET
