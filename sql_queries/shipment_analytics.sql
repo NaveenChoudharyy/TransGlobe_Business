@@ -500,40 +500,291 @@ from cte;
 ------------------------------------------------------------------------------------------------------------------------
 -- Q31. Build a carrier scorecard combining late-rate rank and cost rank into one weighted score.
 
+-- for business context weight of avg_ShippingCost taking as 0.4 and for islate_rate taking it as 0.6
+with cte as (
+            select 
+            f.CarrierID, avg(f.ShippingCost) as avg_ShippingCost,
+            sum(case when f.Late_Delivery = 1 then 1.0 else 0 end)/count(*) as islate_rate
+            from Fact_Shipments as f
+            group by f.CarrierID
+), cte_2 as (
+            select *,
+                RANK() over(order by avg_ShippingCost asc)*0.4 as rn_avg_ShippingCost, -- using 'asc' as lower cost is better
+                RANK() over(order by islate_rate asc)*0.6 as rn_islate_rate-- using 'asc' as lower cost is better
+            from cte
+)
 select 
-* 
-from Fact_Shipments as f
-
-
+CarrierID, rn_avg_ShippingCost + rn_islate_rate as cr_scorecard
+from cte_2
+order by cr_scorecard; -- lower the score better the carrier
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Q32. Cohort analysis: registration-month cohorts vs. their shipment late rate & spend.
 
+with cte as (
+            select
+            f.CustomerID, 
+            format(c.RegistrationDate, 'yyyy-MM') as dt,
+            case when f.Late_Delivery = 1 then 1.0 else 0 end as is_late,
+            f.OrderValue 
+            from Fact_Shipments as f
+            left join Dim_Customers as c
+            on c.CustomerID = f.CustomerID
+)
+select 
+dt as cohort, cast(round(sum(is_late)/count(*), 2) as decimal(10,2)) as is_late_rate,
+cast(round(sum(OrderValue), 2) as decimal(10,2)) as total_OrderValue 
+from cte
+group by dt 
+order by cohort asc;
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Q33. Which carriers have a late rate more than 1 standard deviation above the network average?
+
+with cte_1 as (
+            select 
+            f.CarrierID, sum(case when f.Late_Delivery = 1 then 1.0 else 0 end)/count(*) as is_late_rate
+            from Fact_Shipments as f
+            group by CarrierID
+), cte_2 as (
+            select 
+            stdevp(is_late_rate) + avg(is_late_rate) as one_standard_deviation_above_the_network_average
+            from cte_1
+), cte_3 as (
+            select *, 
+            case when one_standard_deviation_above_the_network_average < is_late_rate then 1 else 0 end as flag_above_std
+            from cte_2 as c2
+            cross join cte_1 as c1
+)
+select 
+CarrierID, cast(one_standard_deviation_above_the_network_average as decimal(10,4)) as one_standard_deviation_above_the_network_average,
+cast(is_late_rate as decimal(10,4)) as is_late_rate
+from cte_3
+where flag_above_std = 1;
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Q34. Which routes' late rate worsened by more than 5 points quarter-over-quarter?
 
+-- let 5 points quarter-over-quarter as 5% q-O-q so we will calculate as 0.05 in below query
+with cte_1 as (
+            select 
+            f.RouteID,
+            year(convert(date, cast(f.DateKey as char(8)), 112)) as yr,
+            datepart(quarter, convert(date, cast(f.DateKey as char(8)), 112)) qtr, 
+            sum(case when f.Late_Delivery = 1 then 1.0 else 0 end)/count(*) as is_late_rate
+            from Fact_Shipments as f
+            group by f.RouteID, year(convert(date, cast(f.DateKey as char(8)), 112)),
+            datepart(quarter, convert(date, cast(f.DateKey as char(8)), 112))
+), cte_2 as (
+            select *,
+            is_late_rate - lag(is_late_rate) over(partition by RouteID order by yr, qtr) as q_o_q_diff
+            from cte_1
+)
+select * from cte_2
+where q_o_q_diff > 0.05;
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Q35. For each warehouse, who is the most time-efficient employee (min. 30 shipments handled)?
+
+-- Interpretation note: "min. 30 shipments handled" is applied as the employee's TOTAL shipment 
+-- volume across all warehouses (overall experience threshold), not shipments at that specific 
+-- warehouse. Checked the data and no single employee has handled 30+ shipments at any one 
+-- warehouse, so a per-warehouse threshold would return zero results. This approach instead 
+-- filters to experienced employees (30+ shipments overall) first, then compares their 
+-- per-warehouse average processing time to find the most efficient one at each location.
+-- Caveat: per-warehouse averages may be based on a small sample (as few as ~6 shipments), 
+-- so treat "most efficient" as indicative, not statistically robust — wh_shipment_cnt is 
+-- included in the output to show how much data backs each result.
+with cte_1 as (
+            select 
+            f.EmployeeID, count(f.EmployeeID) as shipment_cnt
+            from Fact_Shipments as f
+            where f.EmployeeID is not null
+            group by f.EmployeeID
+), cte_2 as (
+            select 
+            f.WarehouseID, f.EmployeeID, avg(f.WarehouseProcessingTimeHours) as avg_WarehouseProcessingTimeHours
+            from Fact_Shipments as f
+            inner join cte_1 as c1
+            on c1.EmployeeID = f.EmployeeID
+            where c1.shipment_cnt >= 30 and f.WarehouseProcessingTimeHours is not null
+            group by f.WarehouseID, f.EmployeeID
+), cte_3 as (
+            select 
+            *, rank() over(partition by WarehouseID order by avg_WarehouseProcessingTimeHours) as rn
+            from cte_2
+)
+select 
+WarehouseID, avg_WarehouseProcessingTimeHours, EmployeeID
+from cte_3 
+where rn = 1;
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Q36. Build a Traffic x Weather late-rate matrix (weather conditions pivoted into columns).
 
+with cte_1 as (
+            select 
+            f.TrafficCondition, f.WeatherCondition, case when f.Late_Delivery = 1 then 1.0 else 0 end as is_late
+            from Fact_Shipments as f
+            where f.TrafficCondition is not null and f.WeatherCondition is not null
+), cte_2 as (
+            select 
+            TrafficCondition, 
+            sum(case when WeatherCondition = 'Rain' then is_late else 0 end)/
+                    count(case when WeatherCondition = 'Rain' then 1 else null end)  as Rain_late_rate,
+            sum(case when WeatherCondition = 'Extreme Heat' then is_late else 0 end)/
+                    count(case when WeatherCondition = 'Extreme Heat' then 1 else null end) as Extreme_Heat_late_rate,
+            sum(case when WeatherCondition = 'Fog' then is_late else 0 end)/
+                    count(case when WeatherCondition = 'Fog' then 1 else null end) as Fog_late_rate,
+            sum(case when WeatherCondition = 'Clear' then is_late else 0 end)/
+                    count(case when WeatherCondition = 'Clear' then 1 else null end) as Clear_late_rate,
+            sum(case when WeatherCondition = 'Storm' then is_late else 0 end)/
+                    count(case when WeatherCondition = 'Storm' then 1 else null end) as Storm_late_rate
+            from cte_1 as c1
+            group by TrafficCondition
+)
+select 
+TrafficCondition, Rain_late_rate, Extreme_Heat_late_rate, Fog_late_rate, Clear_late_rate, Storm_late_rate
+from cte_2;
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Q37. Flag customers whose latest carrier runs above-average late rates AND whose delay count is rising.
+
+-- excluding Customers with only one shipment since we cann't calculate if delay count is rising.
+with cte_1 as (
+    select 
+        f.CustomerID, f.CarrierID, f.NumPreviousDelaysCustomer,
+        convert(date, cast(f.DateKey as char(8)), 112) as dt, 
+        case when f.Late_Delivery = 1 then 1.0 else 0 end as is_late,
+        lag(NumPreviousDelaysCustomer, 1) over (partition by CustomerID order by convert(date, cast(f.DateKey as char(8)), 112) asc) as prev_delay_cnt,
+        ROW_NUMBER() over (partition by f.CustomerID order by convert(date, cast(f.DateKey as char(8)), 112) desc) as rn
+    from Fact_Shipments as f
+),
+cte_2 as (
+    select 
+        *, 
+        case when NumPreviousDelaysCustomer > prev_delay_cnt then 1 else 0 end as delay_rising_flag
+    from cte_1
+    where rn = 1
+        and prev_delay_cnt is not null   -- excluding Customers with only one shipment
+),
+cte_3 as (
+    select 
+        f.CarrierID, 
+        sum(case when f.Late_Delivery = 1 then 1.0 else 0 end) / count(*) as carrier_late_rate 
+    from Fact_Shipments as f
+    group by f.CarrierID
+),
+cte_4 as (
+    select 
+        sum(case when Late_Delivery = 1 then 1.0 else 0 end) / count(*) as network_avg_late_rate
+    from Fact_Shipments
+),
+cte_5 as (
+    select 
+        c3.CarrierID,
+        c3.carrier_late_rate,
+        c4.network_avg_late_rate,
+        case when c3.carrier_late_rate > c4.network_avg_late_rate then 1 else 0 end as carrier_above_avg_flag
+    from cte_3 as c3
+    cross join cte_4 as c4
+)
+select 
+    c2.CustomerID, 
+    c2.CarrierID, 
+    c2.dt as latest_shipment_date,
+    c2.NumPreviousDelaysCustomer as latest_delay_cnt,
+    c2.prev_delay_cnt,
+    c2.delay_rising_flag,
+    c5.carrier_late_rate,
+    c5.network_avg_late_rate,
+    c5.carrier_above_avg_flag
+from cte_2 as c2
+inner join cte_5 as c5
+    on c2.CarrierID = c5.CarrierID
+where c2.delay_rising_flag = 1 
+    and c5.carrier_above_avg_flag = 1
+order by c2.CustomerID;
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Q38. Do above-median-age vehicles run a higher late rate than at/below-median-age vehicles?
 
+with cte_1 as (
+            select distinct percentile_cont(0.5) within group(order by VehicleAgeYears) over() as median
+            from Dim_Vehicles
+), cte_2 as (
+            select 
+            case when v.VehicleAgeYears > median then 'above_median' else 'at_or_below_median' end as above_median_age_flag,
+            case when f.Late_Delivery = 1 then 1.0 else 0 end as is_late
+            from Dim_Vehicles as v
+            inner join Fact_Shipments as f
+            on v.VehicleID = f.VehicleID
+            cross join cte_1 as c1
+), cte_3 as (
+            select 
+            above_median_age_flag, sum(is_late)/count(*) as is_late_rate 
+            from cte_2
+            group by above_median_age_flag
+)
+select * from cte_3;
+-- So it is true that above-median-age vehicles run a higher late rate than at/below-median-age vehicles 
+
 ------------------------------------------------------------------------------------------------------------------------
 -- Q39. Top 5 products per category by revenue, with rank and cumulative % of category revenue.
+
+with cte_1 as (
+            select 
+            p.Category, sum(f.OrderValue) as total_OrderValue_categorywise
+            from Fact_Shipments as f
+            left join Dim_Products as p
+            on p.ProductID = f.ProductID
+            group by p.Category
+), cte_2 as (
+            select 
+            p.Category, p.ProductID, p.ProductName,total_OrderValue_categorywise, sum(f.OrderValue) as total_OrderValue_productwise
+            from Fact_Shipments as f
+            left join Dim_Products as p
+            on p.ProductID = f.ProductID
+            left join cte_1 as c1
+            on c1.Category = p.Category
+            group by p.Category, p.ProductID, total_OrderValue_categorywise, p.ProductName
+), cte_3 as (
+            select
+            Category, ProductID, ProductName, total_OrderValue_productwise/total_OrderValue_categorywise as percentages, dense_rank() over(partition by Category order by total_OrderValue_productwise desc) as rn
+            from cte_2
+)
+select Category, ProductID, ProductName, rn as ranks,
+sum(percentages) over(partition by category order by rn asc) as cum_percent
+from cte_3
+where rn <= 5;
 
 ------------------------------------------------------------------------------------------------------------------------
 -- Q40. Flag anomalous shipping costs (z-score > 3) within their own distance-decile peer group.
 
-
+with cte_1 as (
+            select 
+            f.ShipmentID,
+            ntile(10) over(order by f.DistanceKm) as decile, 
+            f.ShippingCost 
+            from Fact_Shipments as f
+            where f.ShippingCost  is not null
+), cte_2 as (
+            select 
+            ShipmentID, decile, ShippingCost,
+            avg(ShippingCost) over(partition by decile) as mean,
+            stdevp(ShippingCost) over(partition by decile) as std
+            from cte_1
+            where ShippingCost is not null
+), cte_3 as (
+            select 
+            ShipmentID, ShippingCost, 
+            decile, (ShippingCost - mean)/std as z_score
+            from cte_2
+)
+select * 
+from cte_3
+where abs(z_score) > 3
+order by decile, ShipmentID;
 
 /*  =========================================================================================================
 
