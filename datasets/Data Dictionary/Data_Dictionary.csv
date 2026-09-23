@@ -1,6 +1,6 @@
 Column,Table,Data Type,Description,Example,Variable Type,Nullable,Key / ML Role
 DateKey,Dim_Dates,INT,Surrogate date key (yyyymmdd),20240816,Discrete,No,PK
-FullDate,Dim_Dates,DATE,Calendar date,2024-08-16,Date,No,
+FullDate,Dim_Dates,DATE,Calendar date,16-08-2024,Date,No,
 Day,Dim_Dates,TINYINT,Day of month,16,Discrete,No,
 Month,Dim_Dates,TINYINT,Month number,8,Discrete,No,
 MonthName,Dim_Dates,VARCHAR(15),Month name,August,Categorical,No,
@@ -19,7 +19,7 @@ CustomerID,Dim_Customers,INT,Surrogate customer key,1690,Discrete,No,PK
 CustomerName,Dim_Customers,VARCHAR(50),Customer display name,Customer_01690,Categorical (ID-like),No,
 Segment,Dim_Customers,VARCHAR(20),"Business segment (contains ~3% dirty lowercase values by design, e.g. 'retail')",Enterprise,Categorical,No,
 LocationID,Dim_Customers,INT,Customer home location,7,Discrete,No,FK -> Dim_Locations
-RegistrationDate,Dim_Customers,DATE,Date customer registered,2021-05-02,Date,No,
+RegistrationDate,Dim_Customers,DATE,Date customer registered,02-05-2021,Date,No,
 CustomerTier,Dim_Customers,VARCHAR(15),Loyalty tier,Gold,Categorical,No,
 ProductID,Dim_Products,INT,Surrogate product key,456,Discrete,No,PK
 ProductName,Dim_Products,VARCHAR(50),Product display name,Product_00456,Categorical (ID-like),No,
@@ -66,23 +66,23 @@ WarehouseID,Fact_Shipments,INT,Origin warehouse,7,Discrete,No,FK -> Dim_Warehous
 EmployeeID,Fact_Shipments,INT,Handling employee (~1% missing by design),816,Discrete,Yes,FK -> Dim_Employees
 RouteID,Fact_Shipments,INT,Route used,27,Discrete,No,FK -> Dim_Routes
 ShipmentStatus,Fact_Shipments,VARCHAR(15),Current shipment status,Delivered,Categorical,No,
-DeliveryMode,Fact_Shipments,VARCHAR(10),Transport mode (~2% dirty lowercase by design),Road,Categorical,No,ML feature
-ShippingPriority,Fact_Shipments,VARCHAR(15),Service priority chosen at booking,Express,Categorical,No,ML feature
-PaymentMethod,Fact_Shipments,VARCHAR(15),Payment method,COD,Categorical,No,ML feature
-WeatherCondition,Fact_Shipments,VARCHAR(15),Weather at time of shipment (~1.5% missing by design),Clear,Categorical,Yes,ML feature
-TrafficCondition,Fact_Shipments,VARCHAR(10),Traffic level on route (~1.5% dirty casing by design),High,Categorical,No,ML feature
-OrderQuantity,Fact_Shipments,INT,Units ordered,21,Discrete,No,ML feature
-PackageWeightKg,Fact_Shipments,"DECIMAL(10,2)","Total package weight (~2% missing, contains outliers by design)",100.7,Continuous,Yes,ML feature
-PackageVolumeM3,Fact_Shipments,"DECIMAL(10,4)",Total package volume (~3% missing by design),0.614,Continuous,Yes,ML feature
-DistanceKm,Fact_Shipments,"DECIMAL(10,1)",Shipment distance (contains a few negative/invalid values by design),826.9,Continuous,No,ML feature
-ShippingCost,Fact_Shipments,"DECIMAL(10,2)","Cost to ship (~1.5% missing, contains outliers by design)",1148.45,Continuous,Yes,ML feature (or business metric)
-OrderValue,Fact_Shipments,"DECIMAL(12,2)",Monetary value of order,6795.59,Continuous,No,ML feature
-HandlingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Hours spent handling at warehouse,0.11,Continuous,No,ML feature
-LoadingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Hours spent loading vehicle,0.83,Continuous,No,ML feature
-WarehouseProcessingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Total warehouse processing time (~2% missing by design),1.96,Continuous,Yes,ML feature
-FuelConsumptionLiters,Fact_Shipments,"DECIMAL(8,2)",Estimated fuel used (~2.5% missing by design),167.59,Continuous,Yes,"ML feature (operational, not usually known pre-delivery -- use with care)"
-PromisedDeliveryDays,Fact_Shipments,TINYINT,Delivery days promised at booking,2,Discrete,No,ML feature -- SAFE (known pre-outcome)
-ActualDeliveryDays,Fact_Shipments,TINYINT,Actual days taken to deliver,1,Discrete,No,DO NOT USE -- target leakage (known only after outcome)
-DeliveryTimeHours,Fact_Shipments,"DECIMAL(8,1)",Actual delivery time in hours (contains outliers by design),24.2,Continuous,No,DO NOT USE -- target leakage (known only after outcome)
-NumPreviousDelaysCustomer,Fact_Shipments,TINYINT,Customer's historic delay count,1,Discrete,No,ML feature
+DeliveryMode,Fact_Shipments,VARCHAR(10),Transport mode (~2% dirty lowercase by design),Road,Categorical,No,
+ShippingPriority,Fact_Shipments,VARCHAR(15),Service priority chosen at booking,Express,Categorical,No,
+PaymentMethod,Fact_Shipments,VARCHAR(15),Payment method,COD,Categorical,No,
+WeatherCondition,Fact_Shipments,VARCHAR(15),Weather at time of shipment (~1.5% missing by design),Clear,Categorical,Yes,
+TrafficCondition,Fact_Shipments,VARCHAR(10),Traffic level on route (~1.5% dirty casing by design),High,Categorical,No,
+OrderQuantity,Fact_Shipments,INT,Units ordered,21,Discrete,No,
+PackageWeightKg,Fact_Shipments,"DECIMAL(10,2)","Total package weight (~2% missing, contains outliers by design)",100.7,Continuous,Yes,
+PackageVolumeM3,Fact_Shipments,"DECIMAL(10,4)",Total package volume (~3% missing by design),0.614,Continuous,Yes,
+DistanceKm,Fact_Shipments,"DECIMAL(10,1)",Shipment distance (contains a few negative/invalid values by design),826.9,Continuous,No,
+ShippingCost,Fact_Shipments,"DECIMAL(10,2)","Cost to ship (~1.5% missing, contains outliers by design)",1148.45,Continuous,Yes,
+OrderValue,Fact_Shipments,"DECIMAL(12,2)",Monetary value of order,6795.59,Continuous,No,
+HandlingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Hours spent handling at warehouse,0.11,Continuous,No,
+LoadingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Hours spent loading vehicle,0.83,Continuous,No,
+WarehouseProcessingTimeHours,Fact_Shipments,"DECIMAL(6,2)",Total warehouse processing time (~2% missing by design),1.96,Continuous,Yes,
+FuelConsumptionLiters,Fact_Shipments,"DECIMAL(8,2)",Estimated fuel used (~2.5% missing by design),167.59,Continuous,Yes,
+PromisedDeliveryDays,Fact_Shipments,TINYINT,Delivery days promised at booking,2,Discrete,No,
+ActualDeliveryDays,Fact_Shipments,TINYINT,Actual days taken to deliver,1,Discrete,No,
+DeliveryTimeHours,Fact_Shipments,"DECIMAL(8,1)",Actual delivery time in hours (contains outliers by design),24.2,Continuous,No,
+NumPreviousDelaysCustomer,Fact_Shipments,TINYINT,Customer's historic delay count,1,Discrete,No,
 Late_Delivery,Fact_Shipments,BIT,"TARGET VARIABLE: 1 if delivered late, else 0",0,Binary/Target,No,TARGET
