@@ -4,13 +4,14 @@
 
 ## 1. Project Overview
 
-**TransGlobe_Business** is an end-to-end logistics analytics project built using a synthetic dataset published on **Kaggle**.
+**TransGlobe_Business** is an end-to-end logistics analytics project built using a logistics dataset published on **Kaggle**.
 
 The project combines **SQL Server, Python, machine learning, and Power BI** to transform logistics data into:
 
 - Business-focused SQL analysis
+- Exploratory data analysis and operational insights
 - A predictive model for late-delivery risk
-- An interactive four-page Power BI dashboard
+- An interactive Power BI dashboard
 - Actionable operational insights
 
 ### Business Domain
@@ -99,7 +100,7 @@ The documented grain of `Fact_Shipments` is one row per shipment/shipment leg, d
 
 | Table | Rows | Columns |
 |---|---:|---:|
-| Fact_Shipments | 22,110 | 30 |
+| Fact_Shipments | 22,110 | 32 |
 | Dim_Dates | 1,096 | 10 |
 | Dim_Customers | 3,000 | 6 |
 | Dim_Products | 800 | 7 |
@@ -109,7 +110,7 @@ The documented grain of `Fact_Shipments` is one row per shipment/shipment leg, d
 | Dim_Warehouses | 30 | 6 |
 | Dim_Locations | 25 | 6 |
 | Dim_Carriers | 10 | 5 |
-| **Total** | **~29,821** | **87 documented columns** |
+| **Total** | **~29,821** | **89 documented columns** |
 
 ---
 
@@ -303,7 +304,7 @@ The SQL work demonstrates both standard querying and advanced analytical SQL tec
 
 ---
 
-# 5.4 Data Cleaning — Python / Jupyter
+# 5.3 Data Cleaning — Python / Jupyter
 
 After the SQL analysis, the data was cleaned and prepared in Python.
 
@@ -323,6 +324,73 @@ Examples of data-quality issues considered included inconsistent categorical tex
 The cleaning stage was performed before downstream classification modeling and BI preparation.
 
 ---
+
+
+# 5.4 Exploratory Data Analysis — Python / Jupyter
+
+After data cleaning, an extensive exploratory data analysis was performed in Python/Jupyter to identify operational factors associated with delivery delays.
+
+The EDA contains **20 business-focused analytical questions**, with each question supported by a summary table and visual analysis.
+
+### EDA Questions
+
+| # | Business Question |
+|---|---|
+| **Q1** | How does shipping priority influence delivery performance, and are higher-priority shipments delivered closer to their promised delivery time? |
+| **Q2** | How does route distance affect delivery performance, and are longer-distance shipments more likely to be delivered late? |
+| **Q3** | To what extent do traffic and weather conditions influence delivery performance, and which combinations are associated with higher late-delivery rates? |
+| **Q4** | How does delivery mode affect delivery reliability, delivery time, and the gap between promised and actual delivery days? |
+| **Q5** | Are customers with a history of previous delivery delays more likely to experience another late delivery? |
+| **Q6** | How do package weight and volume affect delivery time and the likelihood of late delivery? |
+| **Q7** | How does delivery performance vary across carriers, and are high-volume carriers consistent in meeting delivery commitments? |
+| **Q8** | Does longer warehouse processing time lead to higher late-delivery rates and longer delivery times? |
+| **Q9** | Do shipments requiring more handling or loading time have higher late-delivery rates and longer actual delivery times? |
+| **Q10** | How consistently are shipments processed and delivered across different warehouses, and does warehouse activity relate to delivery performance? |
+| **Q11** | Do older vehicles experience higher late-delivery rates or longer delivery times than newer vehicles? |
+| **Q12** | How does order quantity affect delivery performance, delivery time, and delivery delays? |
+| **Q13** | How does shipping cost relate to delivery performance and late-delivery risk? |
+| **Q14** | How does order value relate to delivery performance and delivery delays? |
+| **Q15** | Does payment method have a relationship with delivery performance, delivery time, and shipping cost? |
+| **Q16** | How do route distance and shipping priority interact, and does the relationship affect late-delivery performance? |
+| **Q17** | Does vehicle utilization relate to delivery performance and late-delivery risk? |
+| **Q18** | How does delivery reliability vary across routes, and which routes show different late-delivery patterns? |
+| **Q19** | Does customer activity level and previous delay history relate to current delivery performance? |
+| **Q20** | How does the combination of traffic, weather, and shipping priority affect delivery risk? |
+
+### EDA Feature Engineering
+
+Several analytical bands were created to make continuous variables easier to compare across operational groups:
+
+- **Distance_Band** — Short, Medium, Long, Very Long Distance
+- **Weight_Band** — Light, Medium, Heavy, Very Heavy
+- **Volume_Band** — Small, Medium, Large, Very Large
+- **Warehouse_Processing_Band** — Low, Medium, High, Very High
+- **Handling_Time_Band** — Low, Medium, High, Very High
+- **Loading_Time_Band** — Low, Medium, High, Very High
+- **Shipping_Cost_Band** — Low, Medium, High, Very High Cost
+- **Order_Value_Band** — Low, Medium, High, Very High Value
+- **Utilization_Band** — Low, Medium, High, Very High Utilization
+- **Customer_Segment** — Low, Medium, High, Very High Activity
+
+### EDA Analysis Areas
+
+The 20 questions cover:
+
+- Delivery performance by shipping priority and delivery mode
+- Distance and package-size effects
+- Traffic and weather risk
+- Customer delay history and activity
+- Carrier performance
+- Warehouse processing efficiency
+- Handling and loading efficiency
+- Vehicle age and utilization
+- Route-level reliability
+- Shipping cost and order value
+- Payment-method patterns
+- Interaction effects between operational factors
+
+The visual analysis uses bar charts, line charts, boxplots, scatter plots with trendlines, and heatmaps to identify patterns and relationships in the shipment data.
+
 
 # 5.5 Classification Modeling Data Preparation
 
@@ -576,7 +644,7 @@ These measures allow the dashboard to move beyond raw tables and provide busines
 
 # 5.13 Power BI — Dashboard Design
 
-The final Power BI report contains **four report pages**.
+The Power BI report contains **four report pages**.
 
 ## Page 1 — Executive Overview
 
@@ -912,6 +980,8 @@ I worked across the complete analytics lifecycle:
 - Loaded 10 Excel source files into relational tables.
 - Solved 40 business problems using SQL Server.
 - Performed data cleaning and validation in Python/Jupyter.
+- Performed 20 business-focused EDA questions using summary tables and visualizations.
+- Created analytical bands and interaction analyses for operational variables.
 - Prepared the dataset for binary classification.
 - Implemented multiple classification algorithms.
 - Compared models using Class 1 precision, recall and F1-score.
@@ -963,14 +1033,27 @@ I worked across the complete analytics lifecycle:
 - Jupyter Notebook
 - `pyodbc`
 
+## Exploratory Data Analysis
+
+- Business Question Framing
+- Univariate & Bivariate Analysis
+- Grouped Summary Tables
+- Quartile-Based Binning
+- Trend Analysis
+- Correlation / Relationship Analysis
+- Scatter & Regression Analysis
+- Heatmaps
+- Boxplots
+- Operational Risk Analysis
+
 ## Machine Learning
 
 - Binary Classification
 - Logistic Regression
 - Random Forest
 - XGBoost
-- SVM
-- KNN
+- **SVM**
+- **KNN**
 - Gradient Boosting
 - Train/Test Split
 - Encoding
@@ -1074,9 +1157,14 @@ TransGlobe_Business/
 ├── sql/
 │   └── 40 Business Problem Queries
 │
-├── notebooks/
-│   ├── Data Cleaning
-│   └── Classification Modeling
+├── eda_and_data_prep/
+│   ├── data_cleaning.ipynb
+│   ├── exploratory_data_analysis.ipynb
+│   └── data_preparation_for_modelling.ipynb
+│
+├── Classification_model/
+│   ├── model_training_evaluation_and_validation.ipynb
+│   └── final_model.pkl
 │
 ├── models/
 │   └── gradient_boosting_model.pkl
@@ -1105,6 +1193,7 @@ TransGlobe_Business/
 | **Database** | SQL Server |
 | **Database Name** | `LogisticsAnalyticsDB` |
 | **SQL Analysis** | 40 Business Problems |
+| **Python EDA** | 20 Business Questions |
 | **ML Problem** | Binary Classification |
 | **Target** | `Late_Delivery` |
 | **Models** | Logistic Regression, Random Forest, XGBoost, SVM, KNN, Gradient Boosting |
@@ -1113,7 +1202,7 @@ TransGlobe_Business/
 | **Grid Search** | GridSearchCV |
 | **Model Format** | Pickle (`.pkl`) |
 | **BI Tool** | Power BI |
-| **Dashboard Pages** | 4 |
+| **Dashboard Pages** | 4 Power BI pages |
 | **Status** | Completed Portfolio Project |
 
 ---
