@@ -1166,9 +1166,6 @@ TransGlobe_Business/
 │   ├── model_training_evaluation_and_validation.ipynb
 │   └── final_model.pkl
 │
-├── models/
-│   └── gradient_boosting_model.pkl
-│
 ├── powerbi/
 │   └── TransGlobe Logistics Performance Dashboard
 │
